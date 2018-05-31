@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <title>Register With Us</title>
 </head>
-<body>
-    <form method="GET" action="https://webhook.site/eba2e3d5-9a17-4a99-91df-13a0eca273a5">
-        <label for="email">E-mail:</label>
-        <input id="email" name="email" placeholder="Enter your E-mail" type="text">
-        <br>
-        <label for="pass">Password:</label>
-        <input type="password" name="pass" id="pass" placeholder="Create a password">
-        <br>
-        <textarea name="bio">We'd like to get to know you. Enter a short bio here!</textarea>
-        <br>
-        <br>
-        <legend>How did you hear about us? (check only one):</legend>
-        1. Billboard <input type="radio" name="question_1" value="1">
-        <br>
-        2. Radio advertisement <input type="radio" name="question_1" value="2">
-        <br>
-        3. Internet advertisment <input type="radio" name="question_1" value="3">
-        <br>
-        4. Other <input type="radio" name="question_1" value="4">
-        <br>
-        <br>
-        <select name="browser_question">
-            <option value="Chrome">Google Chrome</option>
-            <option value="Safari">iOS Safari</option>
-            <option value="Microsoft">Internet Explorer</option>
-        </select>
-        <br>
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    <body>
+        <!--Make sure to go back and stay consistent with label/id/name syntax for each element -->
 
-</body>
+        <form method="POST" action="https://webhook.site/eba2e3d5-9a17-4a99-91df-13a0eca273a5">
+            <label for="email">E-mail:</label>
+            <input id="email" name="email" placeholder="Enter your E-mail" type="text">
+            <br>
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass" placeholder="Create a password">
+            <br>
+            <label for="bio">Bio:</label>
+            <br>
+            <textarea name="bio" id="bio" placeholder="Tell us about yourself!"></textarea>
+            <br>
+            <br>
+            <!--Go back and add labels for each option. This makes it easier to select an answer -->
+
+            <h4>How did you hear about us? (select only one):</h4>
+                Billboard <input type="radio" name="question_1" value="billboard">
+                <br>
+                Radio advertisement <input type="radio" name="question_1" value="radio">
+                <br>
+                Internet advertisment <input type="radio" name="question_1" value="internet">
+                <br>
+                Other <input type="radio" name="question_1" value="other">
+                <input type="text">
+                <br>
+                <br>
+            <select name="browser_question" id="browser_question">
+                <option value="0">Select one:</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="safari">iOS Safari</option>
+                <option value="microsoft">Internet Explorer</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
 </html>
