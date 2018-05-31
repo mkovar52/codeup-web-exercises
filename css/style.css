@@ -1,0 +1,51 @@
+#container {
+    background-color: black;
+    overflow:hidden;
+    height:50px;
+
+}
+
+#container img {
+    float: left;
+    height: 100%;
+
+}
+
+a {
+    color: lightgrey;
+    padding: 10px
+}
+
+section img {
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#sub-header li {
+   display: block;
+    float: left;
+}
+
+h3 {
+    position: relative;
+}
+
+section {
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+main {
+    border: 1px solid black;
+
+}
+
+table {
+    border: 1px solid red;
+}
+
+
+
