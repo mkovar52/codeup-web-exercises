@@ -1,3 +1,49 @@
-.fancy-header {
-    color: purple;
+body {
+    background-color: papayawhip;
+    font-family: "Helvetica Neue", times, sans-serif;
+    background-image: url("https://lh3.ggpht.com/R_3FGG3ii9pp_e5iaO5L0Jr224GQnAY1RBKU52s1KbjthXHDN4jNiNbR6ATo620o8g=h900");
 }
+
+h2 {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+/*.fancy-header {*/
+    /*text-align: center;*/
+    /*color: purple;*/
+/*}*/
+
+ul {
+    list-style-type: square;
+    color: yellow;
+}
+
+ol {
+    color: yellow;
+}
+
+/* this code only moves the text items, and not the actually bullets with them. Why??*/
+ul, ol {
+    text-align: center;
+}
+
+table {
+    background-color: white;
+}
+
+.header-full {
+    text-align: center;
+    color: white;
+}
+
+a:link {
+    color: white;
+    size: 20px;
+}
+
+a:hover {
+    size: 30px;
+}
+
+
