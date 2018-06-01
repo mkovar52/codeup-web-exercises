@@ -37,18 +37,56 @@ section {
     background-color: lightgray;
 }
 
+/*
+
 main {
     border: 1px solid black;
 }
+
 
 table {
     border: 1px solid red;
     width: 100%;
 }
 
-#user1 {
-    border: 1px solid black;
+* end test comment out here */
+
+/* --- USER 1 style here --- */
+
+
+
+.user1-row {
+    border: 1px solid red;
+    width: 100%;
 }
+
+.user1-container {
+    border: 5px solid green;
+}
+
+.user1-icon {
+    float: left;
+    padding-left: 50px;
+}
+
+.user1-name {
+    float: left;
+}
+
+.user1-handle {
+    float: left;
+}
+
+
+/* --- USER 2 style here --- */
+
+
+
+
+/* --- USER 3 style here --- */
+
+
+
 
 footer {
     border: 1px solid red;
