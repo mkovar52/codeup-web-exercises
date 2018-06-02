@@ -1,0 +1,112 @@
+body, html {
+    height: 50%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.nav{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.nav-home {
+    background-color: rgb(203, 220, 255);
+    color: blue;
+    /*transform: translate(200px, 150px);*/
+    /*transition: transform 300ms ease-in-out;*/
+    /*margin: 10px;*/
+    /*height: 75px;*/
+    /*width: 75px;*/
+}
+
+
+.nav-home:hover {
+    animation: home-hover 1s ease-in-out 0s infinite;
+}
+
+@keyframes home-hover {
+    from {
+        height: 10%
+    }
+
+    to {
+        height: 50%;
+    }
+}
+
+
+.nav-about {
+    background-color: rgb(198,246, 217);
+    color: darkgreen;
+    /*margin: 10px;*/
+    /*height: 75px;*/
+    /*width: 75px;*/
+}
+
+.nav-about:hover {
+    animation: about-hover 1s ease-in-out 0s infinite;
+}
+
+@keyframes about-hover {
+    from {
+        height: 10%
+    }
+
+    to {
+        height: 30%;
+    }
+}
+
+.nav-contact {
+    background-color: rgb(251, 254, 195);
+    color: rgb(133, 113,0);
+    /*margin: 10px;*/
+    /*height: 75px;*/
+    /*width: 75px;*/
+}
+
+
+.nav-contact:hover {
+    animation: contact-hover 2s ease-in-out 0s infinite;
+}
+
+@keyframes contact-hover {
+    from {
+        height: 10%
+    }
+
+    to {
+        height: 50%;
+    }
+}
+
+
+
+.nav-services{
+    background-color: rgb(255, 209, 214);
+    color: red;
+    /*margin: 10px;*/
+    /*height: 75px;*/
+    /*width: 75px;*/
+}
+
+.nav-services:hover {
+    animation: services-hover 2s ease-in-out 0s ;
+}
+
+
+@keyframes services-hover {
+    from {
+        height: 10%
+    }
+
+    to {
+        height: 50%;
+    }
+}
