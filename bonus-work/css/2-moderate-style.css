@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(241, 241, 241);
+    font-family: "Raleway", sans-serif;
+}
+
+article p {
+    font-size: 12px;
+}
+
+section p {
+    font-size: 12px;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'main main right'
+    'footer footer footer';
+}
+
+.header-wrap {
+    grid-area: header;
+}
+.header-intro-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.welcome-intro-container {
+    border: 1px solid red;
+}
+
+.welcome-intro-container>p {
+    text-align: center;
+}
+
+.special-text {
+    background-color: black;
+    color: white;
+    font-weight: bold
+}
+
+/* START of the main body styling  */
+
+.main-content-container {
+    grid-area: main;
+    float: left;
+    border: 1px solid green;
+    /*width: 50%;*/
+}
+
+.woods {
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.woods-article-date, .bridge-article-date {
+    color: rgb(112, 112, 112);
+}
+
+.bridge {
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+/* START side content container styling */
+
+.bio {
+    border: 1px solid black;
+    /*background-color: rgb(255, 255, 255);*/
+}
+
+.side-content-container {
+    border: 1px solid blue;
+    /*width: 30%;*/
+    background-color: blue;
+    grid-area: right;
+}
+
+
+
