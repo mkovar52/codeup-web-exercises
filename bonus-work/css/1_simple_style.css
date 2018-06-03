@@ -2,8 +2,10 @@ body {
     font-family: 'Raleway';
     color: white;
     background-image: url("../images/forest.jpg");
-    height: 100%;
-    width: 100%;
+    /*background-size: 100%;*/
+    background-repeat: no-repeat;
+    background-color: red;
+    /*background-attachment: fixed;*/
 }
 
 h1, p {
@@ -15,14 +17,37 @@ p {
 }
 
 hr {
-    width: 35%;
+    width: 25%;
 }
 
 .logo-text {
     float: left;
-    /*padding-left: 10px;*/
+    margin-left: 10px;
 }
 
-.headline {
-    clear: left;
+/* Forced the element to center based on its top padding, but need to find better solution.
+This method could have unwanted effects, plus it's fixed/responsive if you re-size the page. */
+
+.headline-coming-soon {
+    padding-top: 300px;
+}
+
+/* played around with adding more layers, but wasn't able to get effect I wanted. left the below for reference */
+
+/*.container {*/
+    /*width: 100%;*/
+/*}*/
+
+/*.vertical-align {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*!*transform: translate();*!*/
+/*}*/
+
+
+.footer-text {
+    font-size: 12px;
+    float: left;
+    padding-top: 50px;
+    margin-left: 10px;
 }
