@@ -7,9 +7,14 @@ article p {
     font-size: 12px;
 }
 
+/*article h3 h4 p {*/
+    /*margin: 10px;*/
+/*}*/
+
 section p {
     font-size: 12px;
 }
+
 
 .container{
     display: grid;
@@ -18,6 +23,8 @@ section p {
     'main main right'
     'footer footer footer';
 }
+
+/* NEED to find a way to move welcome text closer to "My Blog" heading... */
 
 .header-wrap {
     grid-area: header;
@@ -41,17 +48,17 @@ section p {
     font-weight: bold
 }
 
-/* START of the main body styling  */
+/* START of the TWO articles styling  */
 
 .main-content-container {
     grid-area: main;
     float: left;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     /*width: 50%;*/
 }
 
 .woods {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     background-color: rgb(255, 255, 255);
     display: inline-block;
 }
@@ -66,19 +73,71 @@ section p {
     display: inline-block;
 }
 
+/* trying to move title, title descript & p elements to match the button's margin */
+
+/*.woods, .bridge h3 h4 p {*/
+    /*margin-left: 10px;*/
+/*}*/
+
+.read-more-btn {
+    border: 1px solid rgb(112, 112, 112);
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    font-size: 12px;
+}
+
+.read-more-btn a {
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    color: white;
+    background-color: red;
+}
+
+.read-more-btn a:active {
+    top: 2px;
+}
+
+.comments {
+    float: right;
+    font-weight: bold;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/* REMINDER: need to update comment count highlight for bridge article to CIRCLE */
+
+.comment-count-highlight {
+    background-color: black;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 /* START side content container styling */
+
+
+.side-content-container {
+    border: 1px solid blue;
+    /*width: 30%;*/
+    /*background-color: blue;*/
+    grid-area: right;
+}
 
 .bio {
     border: 1px solid black;
     /*background-color: rgb(255, 255, 255);*/
 }
 
-.side-content-container {
-    border: 1px solid blue;
-    /*width: 30%;*/
-    background-color: blue;
-    grid-area: right;
+.popular-posts {
+    border: 1px solid black;
 }
 
-
+.popular-posts-title {
+    border: 1px solid black;
+    /*background-color: rgb(241, 241, 241);*/
+    background-color: red;
+}
 
