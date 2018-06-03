@@ -1,0 +1,28 @@
+body {
+    font-family: 'Raleway';
+    color: white;
+    background-image: url("../images/forest.jpg");
+    height: 100%;
+    width: 100%;
+}
+
+h1, p {
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+}
+
+hr {
+    width: 35%;
+}
+
+.logo-text {
+    float: left;
+    /*padding-left: 10px;*/
+}
+
+.headline {
+    clear: left;
+}
