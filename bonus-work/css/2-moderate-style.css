@@ -34,9 +34,11 @@ section p {
     padding-top: 20px;
 }
 
-.welcome-intro-container {
-    border: 1px solid red;
-}
+/* the RED border below is ONLY to help visualize the container for information under the main "My Blog" element. */
+
+/*.welcome-intro-container {*/
+    /*border: 1px solid red;*/
+/*}*/
 
 .welcome-intro-container>p {
     text-align: center;
@@ -49,6 +51,7 @@ section p {
 }
 
 /* START of the TWO articles styling  */
+/* - - It might be worth adding ANOTHER container that covers ALL articles so that I can space correctly - - */
 
 .main-content-container {
     grid-area: main;
@@ -57,10 +60,12 @@ section p {
     /*width: 50%;*/
 }
 
-.woods {
-    /*border: 1px solid black;*/
+.woods-article {
+    border: 1px solid black;
     background-color: rgb(255, 255, 255);
     display: inline-block;
+    /*background-image: url("../images/woods.jpg");*/
+    background-repeat: no-repeat;
 }
 
 .woods-article-date, .bridge-article-date {
@@ -71,9 +76,11 @@ section p {
     border: 1px solid black;
     background-color: rgb(255, 255, 255);
     display: inline-block;
+    background-image: url("../images/bridge.jpg");
+    background-repeat: no-repeat;
 }
 
-/* trying to move title, title descript & p elements to match the button's margin */
+/* trying to move title, title description & p elements to match the button's margin */
 
 /*.woods, .bridge h3 h4 p {*/
     /*margin-left: 10px;*/
@@ -121,23 +128,25 @@ section p {
 
 .side-content-container {
     border: 1px solid blue;
-    /*width: 30%;*/
+    /*width: 50%;*/
     /*background-color: blue;*/
     grid-area: right;
 }
 
-.bio {
+.bio-container {
     border: 1px solid black;
-    /*background-color: rgb(255, 255, 255);*/
+    background-color: rgb(255, 255, 255);
 }
 
 .popular-posts {
     border: 1px solid black;
 }
 
+/* - - - I'm going to need to move this container somehow to fit flush against the top. As of this current version on 6/4/18,
+ it's NOT the way I need it to be displayed.- - - */
+
 .popular-posts-title {
     border: 1px solid black;
-    /*background-color: rgb(241, 241, 241);*/
     background-color: red;
 }
 
