@@ -5,9 +5,11 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -16,15 +18,18 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://loremflickr.com/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
+
 a {
     color: var(--link-color);
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
@@ -45,14 +50,23 @@ a {
 .top-nav {
     position: fixed;
     width: 100%;
+    z-index: 1000;
+    background-color: white;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
+
+.container {
+    margin-top: 2em;
+}
+
 .profile {
     background: var(--light-bg);
     height: 80px;
 }
+
 .profile-form {
     float: right;
     line-height: 80px;
@@ -61,7 +75,56 @@ a {
 .profile-image {
     position: absolute;
     top: 235px;
+}
 
+.profile-details {
+    margin-left: .5em;
+    margin-right: .5em;
+    width: calc(25% - 1em);
+    float: left;
+}
+
+.profile-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
+.timeline {
+    margin-left: .5em;
+    margin-right: .5em;
+    width: calc(50% - 1em);
+    float: left;
+    background-color: white;
+}
+
+.who-to-follow {
+    margin-left: .5em;
+    margin-right: .5em;
+    width: calc(25% - 1em);
+    float: left;
+    background-color: white;
+}
+
+.media {
+    width: 100%;
+    padding: .5em;
+    overflow: auto;
+    border-bottom: 1px solid lightgray;
+}
+
+.media-image {
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.media-body {
+    width: calc(100% - 50px);
+    float: left;
 }
 
 .btn {
@@ -72,17 +135,21 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
+
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
 }
+
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-muted {
     color: var(--main-link-color);
 }
