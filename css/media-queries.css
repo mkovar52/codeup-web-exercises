@@ -1,0 +1,71 @@
+/* media */
+/* Small devices (tablets, 339px and up) */
+@media screen and (min-width:339px) {
+
+    body {
+        font-family: "Raleway", Helvetica, Arial;
+    }
+
+    .alert-info, .hidden-on-desktop {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(192, 255, 255);
+        border: 2px solid rgb(206, 206, 206);
+        text-align: center;
+    }
+    
+    .alert-info a {
+        list-style-type: none;
+        /*border: 2px solid red;*/
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        line-height: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        margin: auto;
+        padding: .5em;
+    }
+
+    .nav-links a {
+        display: block;
+        background-color: lightgray;
+        padding: .5em .8em;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .sub-section h2 {
+        font-style: italic;
+        font-weight: bold;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width:992px) {
+
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) {
+
+
+}
+
+
