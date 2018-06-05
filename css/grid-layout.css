@@ -1,0 +1,29 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 100%;
+}
+
+.one-half {
+    /* # of pixels was determined from padding of 10 from two sides,
+    plus 2px for the border */
+    width: calc(50% - 22px);
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.one-third {
+    width: calc(33.33% - 22px);
+    background-color: lightgray;
+    border: 1px solid black;
+}
