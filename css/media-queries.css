@@ -13,7 +13,7 @@
         border: 2px solid rgb(206, 206, 206);
         text-align: center;
     }
-    
+
     .alert-info a {
         list-style-type: none;
         /*border: 2px solid red;*/
@@ -54,18 +54,72 @@
         font-weight: bold;
     }
 
+    footer p {
+        width: 100%;
+        font-size: .75em;
+    }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width:992px) {
+    body {
+        font-family: "Raleway", Helvetica, Arial;
+    }
+
+    .alert-info, .hidden-on-desktop {
+        display: none;
+    }
+
+    h1 {
+        text-align: left;
+        float: left;
+    }
+
+    nav {
+        /*display: inline-block;*/
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        display: inline-block;
+
+    }
 
 
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media screen and (min-width:1200px) {
 
 
-}
+/* Code for Twitter's nav bar is below */
+
+/*.nav {*/
+    /*list-style-type: none;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+
+/*.nav-item {*/
+    /*display: inline-block;*/
+    /*padding: 1.5em;*/
+/*}*/
+
+/*.nav-link {*/
+    /*color: var(--main-link-color);*/
+    /*font-weight: bold;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.top-nav {*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*z-index: 1000;*/
+    /*background-color: white;*/
+    /*height: 50px;*/
+/*}*/
+
+
+
 
 
