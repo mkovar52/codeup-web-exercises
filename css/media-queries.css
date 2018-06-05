@@ -1,10 +1,16 @@
 /* media */
-/* Small devices (tablets, 339px and up) */
+
+/* mobile view */
+/* why is it that when I remove this, I lose all desktop styling?? */
 @media screen and (min-width:339px) {
 
     body {
         font-family: "Raleway", Helvetica, Arial;
+        margin: 20px;
+        position: relative;
     }
+
+    /* Didn't need to target the alert info button this way. Better practice to go */
 
     .alert-info, .hidden-on-desktop {
         width: 100%;
@@ -16,10 +22,12 @@
 
     .alert-info a {
         list-style-type: none;
-        /*border: 2px solid red;*/
+        /* added display block to allow this to act like a button */
+        display: block;
         text-decoration: none;
         font-weight: bold;
         color: black;
+        /* this is what put the text in the CENTER of the button */
         line-height: 40px;
     }
 
@@ -28,24 +36,22 @@
         font-weight: bold;
     }
 
-    nav ul {
+    ul {
         list-style-type: none;
+        margin: 0;
         padding: 0;
+        width: 100%;
     }
 
-    nav li {
-        margin: auto;
-        padding: .5em;
-    }
-
-    .nav-links a {
+    li a {
         display: block;
-        background-color: lightgray;
-        padding: .5em .8em;
+        background-color: lightgrey;
         text-align: center;
+        padding: 10px;
+        margin: 10px;
     }
 
-    img {
+    .header-img img {
         width: 100%;
     }
 
@@ -54,70 +60,79 @@
         font-weight: bold;
     }
 
-    footer p {
-        width: 100%;
-        font-size: .75em;
+    footer {
+        height: 200px;
     }
 
+    footer p {
+        /* my problem was having width = 100%. This prevented the social media images
+        rom coming up as intended. */
+        /*width: 100%;*/
+        font-size: .75em;
+        background-color: red;
+        color: white;
+        height: 25px;
+        float: left;
+        border-radius: 5px;
+        line-height: 25px;
+    }
+
+    /* originally made the mistake of tyring to apply the float:right
+    to social-media-links imgs. */
+
+    .social-media-links {
+        float: right;
+    }
+
+    .social-media-links img {
+        height: 25px;
+        width: 25px;
+        padding: .25em;
+    }
 }
 
-/* Medium devices (desktops, 992px and up) */
+/* - - - DESKTOP view - - - */
 @media screen and (min-width:992px) {
     body {
         font-family: "Raleway", Helvetica, Arial;
+        min-height: 1000px;
     }
 
-    .alert-info, .hidden-on-desktop {
+    .hidden-on-desktop {
         display: none;
     }
 
     h1 {
-        text-align: left;
         float: left;
     }
 
     nav {
-        /*display: inline-block;*/
-        margin: 0;
-        padding: 0;
+        float: right;
     }
 
-    .nav-links a {
+    nav li {
         display: inline-block;
-
+        line-height: 37px;
     }
 
+    li a {
+        background-color: white;
+        color: blue;
+    }
 
+    #main {
+        width: 60%;
+        float: left;
+    }
+    #main p {
+        width: 75%;
+    }
+    footer p {
+        position: relative;
+        top: 250px;
+    }
 }
 
-
-
-/* Code for Twitter's nav bar is below */
-
-/*.nav {*/
-    /*list-style-type: none;*/
-    /*padding: 0;*/
-    /*margin: 0;*/
-/*}*/
-
-/*.nav-item {*/
-    /*display: inline-block;*/
-    /*padding: 1.5em;*/
-/*}*/
-
-/*.nav-link {*/
-    /*color: var(--main-link-color);*/
-    /*font-weight: bold;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*.top-nav {*/
-    /*position: fixed;*/
-    /*width: 100%;*/
-    /*z-index: 1000;*/
-    /*background-color: white;*/
-    /*height: 50px;*/
-/*}*/
 
 
 
