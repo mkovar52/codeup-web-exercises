@@ -27,3 +27,15 @@
     background-color: lightgray;
     border: 1px solid black;
 }
+
+.one-fourth {
+    width: calc(25% - 22px);
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.one-eighth {
+    width: calc(12.5% - 22px);
+    background-color: lightgray;
+    border: 1px solid black;
+}
