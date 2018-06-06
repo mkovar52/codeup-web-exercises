@@ -61,7 +61,7 @@
     }
 
     footer {
-        height: 200px;
+        height: 100px;
     }
 
     footer p {
@@ -72,16 +72,17 @@
         background-color: red;
         color: white;
         height: 25px;
-        float: left;
         border-radius: 5px;
         line-height: 25px;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     /* originally made the mistake of tyring to apply the float:right
     to social-media-links imgs. */
 
     .social-media-links {
-        float: right;
+        text-align: center;
     }
 
     .social-media-links img {
@@ -120,16 +121,17 @@
         color: blue;
     }
 
+    footer {
+        position: relative;
+        top: 250px;
+    }
+
     #main {
         width: 60%;
         float: left;
     }
     #main p {
         width: 75%;
-    }
-    footer p {
-        position: relative;
-        top: 250px;
     }
 }
 
