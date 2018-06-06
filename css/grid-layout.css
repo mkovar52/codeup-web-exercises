@@ -1,3 +1,9 @@
+/* need to clarify the border-box */
+
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
+
 .container {
     margin: 0 auto;
     width: 80%;
@@ -12,6 +18,18 @@
 
 .row {
     width: 100%;
+}
+
+/* CLEARFIX, more modern approach to fix?? read up omn it W3 schools
+
+.row:after {
+content: */
+
+
+/* THe Box class was applied to each class. this is where he applied borders and background color instead of writing it out
+for each section */
+.box {
+
 }
 
 .one-half {
