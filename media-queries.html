@@ -8,37 +8,57 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
 </head>
 <body>
-    <div class="alert-info hidden-on-desktop">
-        <a href="#main">Skip to main content</a>
-    </div>
-    <h1>Company</h1>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="header-img">
-        <img src="http://via.placeholder.com/350x150" alt="">
-    </div>
-    <section id="main" class="main">
-        <h2>Main Section</h2>
-        <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
-    </section>
-    <section class="sub-section">
-        <h2>Sub-section</h2>
-        <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
-    </section>
-    <footer>
-        <p>(c) 2017 All rights reserved</p>
-        <!-- added bonus social media links-->
-        <div class="social-media-links">
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.jpg"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-logo-bird.png"></a>
+        <main class="container">
+                    <div class="alert-info hidden-on-desktop">
+                        <a href="#main">Skip to main content</a>
+                        </div>
+                        <h1>Company</h1>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+            <div class="row">
+
+                <div class=" column two-thirds">
+                    <div class="header-img">
+                        <img class ="full" src="http://via.placeholder.com/350x150" alt="350 x 150 image">
+                    </div>
+                </div>
+        <!-- inserted ROW & COLUMN from grid-layout exercise in order to grid the content how I wanted to -->
+
+
+                
+        <div class="row">
+            <div class="column one-half">
+                <section id="main" class="main">
+                    <h2>Main Section</h2>
+                    <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
+                </section>
+            </div>
         </div>
-    </footer>
+            <div class="row">
+                 <!--<div class="column one-half">-->
+                    <section class="sub-section">
+                        <h2>Sub-section</h2>
+                        <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
+                    </section>
+                 <!--</div>-->
+            </div>
+    </main>
+        <!-- added class of container to help separate from main body, but still apply desired effects -->
+        <footer class="container">
+            <p>(c) 2017 All rights reserved</p>
+            <!-- added bonus social media links-->
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.jpg"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter-logo-bird.png"></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
