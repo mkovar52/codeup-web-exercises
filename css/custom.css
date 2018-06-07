@@ -8,6 +8,8 @@
     background-image: url("../images/pizza.png");
     background-position: center-top;
     background-repeat: no-repeat;
+    /* background-size: cover; this will take as much space
+    as it can to show it in the best resolution!*/
 }
 
 .display-container {
@@ -24,9 +26,9 @@ span.badge.badge-light {
 
 }
 
-.nav-tabs .btn {
-    font-size: .8em;
-}
+/*.nav-tabs .btn {*/
+    /*font-size: .8em;*/
+/*}*/
 
 .card-header {
     background-color: rgb(0, 108, 255);
@@ -34,7 +36,8 @@ span.badge.badge-light {
     font-size: .8em;
 }
 
-
-
+/*.card-body.card {*/
+    /*width: 67rem;*/
+/*}*/
 
 
