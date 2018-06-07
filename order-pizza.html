@@ -41,20 +41,71 @@
         </div>
     </div>
     <h2>Build your own pizza!</h2>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
+                <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">
+                    <span class="badge badge-light">1</span>
+                    Size and Crust</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false">
+                    <span class="badge badge-light">2</span>Cheese and Sauce</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" id="topping-tab" data-toggle="tab" href="#topping" role="tab" aria-controls="topping" aria-selected="false">
+                    <span class="badge badge-light">3</span>Toppings</a>
             </li>
         </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
+                <!-- CARD #1 for size and crust -->
+
+                <div class="card">
+                    <div class="card-header">
+                        Choose Size and Crust
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title FOR CRUSSSSSTTTT</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Next Step ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD #2 for cheese and sauce -->
+
+            <div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
+                <div class="card">
+                    <div class="card-header">
+                        Choose Cheese and Sauce
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title for CHEESE!</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Next Step ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD #3 for topping -->
+
+            <div class="tab-pane fade" id="topping" role="tabpanel" aria-labelledby="topping-tab">
+                <div class="card">
+                    <div class="card-header">
+                        Choose your Topping
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title for TOPTOPTOPTOPPPINGGG!</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Next Step ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 </div>

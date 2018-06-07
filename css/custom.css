@@ -28,5 +28,13 @@ span.badge.badge-light {
     font-size: .8em;
 }
 
+.card-header {
+    background-color: rgb(0, 108, 255);
+    color: white;
+    font-size: .8em;
+}
+
+
+
 
 
