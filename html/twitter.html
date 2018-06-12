@@ -12,7 +12,7 @@
         <li class="nav-item"><a class="nav-link" href="#">Moments</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
-        <!--  twtter icon not showing up.. does this have to do with its z-index??? -->
+        <!--  twitter icon not showing up.. does this have to do with its z-index??? -->
         <i class="fab fa-twitter"></i>
     </ul>
 </nav>
@@ -21,10 +21,21 @@
         <div class="profile-header">
             <img class="img-circle profile-image" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user">
         </div>
+        <!--  Users Additional Menu Options - tweets, likes, followers, following. As of now,
+          viewing this menu distorts the edit profile btn and pushes it out of the container..
+          what if I combine them in the same div?? -->
         <div class="profile-form">
             <form action="#" class="text-right">
                 <button class="btn btn-large">Edit profile</button>
             </form>
+            <div class="alt-menu-options-container">
+                <ul class="alt-menu-options-nav">
+                    <li>Tweets</li>
+                    <li>Following</li>
+                    <li>Followers</li>
+                    <li>Likes</li>
+                </ul>
+            </div>
         </div>
     </section>
 </header>
@@ -39,8 +50,8 @@
         <p>Regular twitter user | ¯\_(ツ)_/¯</p>
 
         <ul class="profile-items">
-            <li class="profile-entry"><a href="#">San Antonio, TX</a></li>
-            <li class="profile-entry"><a href="https://www.codeup.com" target="_#">codeup.com</a></li>
+            <li class="profile-entry"><a href="https://www.google.com/maps/place/San+Antonio,+TX/@29.481137,-98.7945945,10z/data=!3m1!4b1!4m5!3m4!1s0x865c58af04d00eaf:0x856e13b10a016bc!8m2!3d29.4241219!4d-98.4936282" target="_blank">San Antonio, TX</a></li>
+            <li class="profile-entry"><a href="https://www.codeup.com" target="_blank">codeup.com</a></li>
             <li class="text-muted profile-entry">Joined June 2011</li>
         </ul>
     </aside>
@@ -70,10 +81,12 @@
             </div>
         </div>
         <div class=media>
+            <!-- my image is somewhat distorted check into other alternatives,
+                or figure out why it looks different. -->
             <img class="media-image img-circle" src="images/headshot.jpeg" alt="user MK">
             <div class="media-body">
                 <h4 class="tweet-user">Mykel Kovar <span class="text-muted">@MykelKovar</span></h4>
-                <p>I'm attending Codeup to become a software Developer, get paid more,
+                <p><span class="text-muted">@GoCodeup</span> I'm attending Codeup to become a developer, get paid more,
                     and enjoy a better work/life balance.</p>
                 <p>It's difficult, but....</p>
                 <p>If it were easy - everyone would be doing it:)</p>

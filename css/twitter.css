@@ -48,7 +48,6 @@ a {
     text-decoration: none;
 }
 
-
 .top-nav {
     position: fixed;
     width: 100%;
@@ -71,6 +70,24 @@ a {
     background: var(--light-bg);
     height: 80px;
 }
+
+/* ALT MENU OPTIONS NAV styling */
+
+.alt-menu-options-nav {
+    padding: 0;
+    /*width: 100%;*/
+}
+
+.alt-menu-options-nav li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    /*line-height: 80px;*/
+    /*float: right;*/
+}
+
+
+
 
 .profile-form {
     float: right;

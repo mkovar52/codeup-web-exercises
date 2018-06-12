@@ -1,0 +1,112 @@
+body{
+    --orange: #e6563b;
+    --yellow: rgb(241,158,0);
+    --green: #7cb06c;
+    --blue: #00aba9;
+    --gray:#e6e6e6;
+    --silver: #f0f0f0;
+    box-sizing: border-box;
+    background: var(--silver);
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Anton';
+}
+p{
+    font-family: 'Abel';
+}
+.space_div{
+    border: 1px solid red;
+}
+.logo_box{
+    /*border: 1px solid green;*/
+}
+
+.logo_box img{
+    width:105px;
+    height:105px;
+    position: absolute;
+    top: -45px;
+}
+
+.nav_top{
+    max-height: 50px;
+    margin-top: 35px;
+}
+.nav_top *{
+    border: 1px solid blue;
+}
+.nav_spacer{
+    height: 10em;
+}
+
+.bottom_spacer {
+    height: 5em;
+}
+
+.circle_div{
+    width: 105px;
+    height: 105px;
+    border: 5px solid white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mini_circle_div{
+    width: 25px;
+    height: 25px;
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.mini_circle_div h6{
+    line-height: 25px;
+}
+
+.circle_div h5{
+    line-height: 100px;
+}
+
+.orange_div{
+    background: var(--orange);
+}
+
+.yellow_div{
+    background: var(--yellow);
+}
+
+.green_div{
+    background: var(--green);
+}
+
+.blue_div{
+    background: var(--blue);
+}
+.card_props{
+}
+
+.card_props img{
+    width: 100%;
+    max-height: 245px;
+}
+.logo_spacer{
+    height: 55px;
+}
+
+.selected_work_image img {
+    height: 275px;
+    width: 375px;
+}
+
+.last_prop img {
+    height: 45px;
+    width: 45px;
+}
+
+.my_col {
+    border: 2px dotted red;
+}
+
+.my_row {
+    border: 2px dotted yellow;
+}
