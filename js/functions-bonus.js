@@ -1,5 +1,7 @@
 // ================ SIMPLE FUNCTION DRILLS
 
+use strict;
+
 // IIFE START
 (function (){
 
@@ -61,35 +63,42 @@
     console.log(sayHowdy());
 
 
-    // console.log(sayHowdy());
-
-
-
 // ---Remember this function does not need a defined return value
 
 
+// function made to return average between variables a & b
 
+function getAverage(a, b) {
+    var average = (a + b) / 2;
+    console.log(average);
+    return average;
+}
 
-// function getAverage(a, b) {
-//     var average = (a + b) / 2;
-//     console.log(average);
-//     return average;
-// }
-//
-// var myAverage = getAverage(15, 15);
-// console.log(('the average is ' + myAverage));
-//
+var myAverage = getAverage(15, 15);
+console.log(('the average is ' + myAverage));
+
 // var myAverage = getAverage(20, 1);
 // console.log(('the average is ' + myAverage));
 
 
-
-
+// just in case file for function warmup isn't found:
+//    function makeUsername(firstName, age) {
+//     return firstname.length + firstName.charAt(0).toLowerCase() + age;
+//    }
+//    console.log(makeUsername());
+//
 
 
 
 // ================ CHALLENGE FUNCTION DRILLS
 // Write a function called `identity(input)` that takes in an argument called input and returns that input.
+
+    function identity(input) {
+
+    }
+
+
+
 // Write a function called `getRandomNumber(min, max)` that returns a random number between min and max values sent to that function call.
 // Write a function called `first(input)` that returns the first character in the provided string.
 // Write a fuction called `last(input)` that returns the last character of a string
