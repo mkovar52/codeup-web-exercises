@@ -1,41 +1,91 @@
 // ================ SIMPLE FUNCTION DRILLS
 
+// IIFE START
+(function (){
+
 // 1) Make a function called returnTwo() that returns the number 2 when called
 // ---Test this function with console.log(returnTwo())
 
-function returnTwo() {
-    return 2;
-}
-
-console.log(returnTwo());
+// function returnTwo() {
+//     return 2;
+// }
+//
+// console.log(returnTwo());
 
 
 // 2) Make a function called returnName() that returns the string of your name
 // ---Test this function with console.log(returnName())
-function returnName() {
-    return "Mykel Kovar";
-}
 
-console.log(returnName());
+// function returnName() {
+//     return "Mykel Kovar";
+// }
+//
+// console.log(returnName());
 
 // 3) Make a function called addThree() which takes in a number input and returns the number plus 3.
 // ---Test this function with console.log(addThree(5))
 
-function addThree(number) {
-
-}
-
+// function addThree(number) {
+//     return number + 3;
+// }
+//
+// console.log(addThree(5));
+// console.log(addThree(10));
+// console.log(addThree(111));
 
 
 // 4) Make a function called sayString() which returns the string input passed in.
 // ---Test this function with console.log(sayString())
 
+    function sayString(string) {
+        console.log('this is input:\n', string);
+        return string;
+    }
+
+    console.log(sayString("Hello World"));
 
 // 5) Make a function called sayHowdy() which console.logs the string “Howdy!”
 // ---Test this function by directly calling sayHowdy()
 
+// not fully understanding why this wouldn't log my results when trying to use sayHowdy(); * first approach 6/13/18
+
+                    // var sayHowdy = "Howdy!";
+                    //
+                    //     console.log(sayHowdy());
+
+//    second approach 6/14/18, works much better.
+    function sayHowdy() {
+        return "Howdy!";
+    }
+
+    console.log(sayHowdy());
+
+
+    // console.log(sayHowdy());
+
+
 
 // ---Remember this function does not need a defined return value
+
+
+
+
+// function getAverage(a, b) {
+//     var average = (a + b) / 2;
+//     console.log(average);
+//     return average;
+// }
+//
+// var myAverage = getAverage(15, 15);
+// console.log(('the average is ' + myAverage));
+//
+// var myAverage = getAverage(20, 1);
+// console.log(('the average is ' + myAverage));
+
+
+
+
+
 
 
 // ================ CHALLENGE FUNCTION DRILLS
@@ -56,3 +106,18 @@ function addThree(number) {
 // # Super Duper Gold-Star Bonus
 // Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
+
+
+
+
+
+
+
+
+
+
+
+
+//IIFE END
+
+})();
