@@ -73,8 +73,8 @@
 // possible to re-factor the block of code by setting a variable inside of the function, then use return at the
 // end with that variable.
 
-
-function analyzeColor(color) {
+//
+// function analyzeColor(color) {
     // if (color === 'blue') {
     //     return color + ' is the color of the sky';
     // } else if (color === 'red') {
@@ -87,27 +87,27 @@ function analyzeColor(color) {
     // } else {
     //     return color + ' is not a valid color';
     // }
-    //
-
-    var result;
-
-    switch (color) {
-        case 'blue':
-            result = color + ' is the color of the sky';
-            break;
-        case 'red':
-            result = 'strawberries are ' + color;
-            break;
-        case 'yellow':
-            result = 'Bananas are ' + color;
-            break;
-        default:
-            result = color + ' is not a valid color';
-    }
-
-    return result;
-
-}
+//     //
+//
+//     var result;
+//
+//     switch (color) {
+//         case 'blue':
+//             result = color + ' is the color of the sky';
+//             break;
+//         case 'red':
+//             result = 'strawberries are ' + color;
+//             break;
+//         case 'yellow':
+//             result = 'Bananas are ' + color;
+//             break;
+//         default:
+//             result = color + ' is not a valid color';
+//     }
+//
+//     return result;
+//
+// }
 
 // if you use a return, you don't need to have a break within the switch case. You would then use the return OUTSIDE of
 // the switch because it belongs to the function.
@@ -177,8 +177,8 @@ function analyzeColor(color) {
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color everytime the page loads)
 
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 
@@ -213,10 +213,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 
 // alert(analyzeColor(prompt('Give me a color'))); one-liner from Fer 6/15/18
+
 // step-by-step of the process above is:
-var usersColor = prompt('Give me a color');
-var res = analyzeColor(usersColor);
-alert(res);
+// var usersColor = prompt('Give me a color');
+// var res = analyzeColor(usersColor);
+// alert(res);
 
 
 /* ########################################################################## */
@@ -240,42 +241,87 @@ alert(res);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+//Fer's approach
+
+function calculateTotal(luckyNumber, total) {
+    var discountedPrice;
+
+    switch (luckyNumber) {
+        case 0:
+            discountedPrice = total;
+            break;
+        case 1:
+            discountedPrice = total * (0.90);
+            break;
+        case 2:
+            discountedPrice = total * (0.75);
+            break;
+        case 3:
+            discountedPrice = total* (0.65);
+            break;
+        case 4:
+            discountedPrice = total * (0.50);
+            break;
+        case 5:
+            discountedPrice = 0;
+            break;
+        default:
+            discountedPrice = 'invalid lucky number';
+    }
+
+    return discountedPrice;
+}
+//helps to increase the number variant to ensure the default value in the switch works correctly.
+
+var luckyNumber = Math.floor(Math.random() * 6);
+
+console.log(luckyNumber);
+console.log(calculateTotal(luckyNumber, 100));
+
+// luckyNumber = Math.floor(Math.random() * 6);
+// console.log(luckyNumber);
+// console.log(calculateTotal(luckyNumber, 500));
+//
+// luckyNumber = Math.floor(Math.random() * 6);
+// console.log(luckyNumber);
+// console.log(calculateTotal(luckyNumber, 500));
+
 //switch case inside of the function? Is it better to use it here?
 
 // var customerNumber = Math.floor(Math.random() * 6);
 // console.log(customerNumber);
 // the above works to gnerate customer's luckyNumber
-
-function calculateTotal(totalAmount, luckyNumber) {
-
-    if (luckyNumber === 0) {
-        discountPercent = alert('sorry, no discount today!');
-        console.log('no discount, customer pays full price:' + totalAmount);
-    } else if (luckyNumber == 1 ) {
-        discountPercent = .1;
-        alert('10% off for you! A penny saved is a penny earned :)');
-    } else if (luckyNumber == 2 ) {
-        discountPercent = .25;
-        alert('You saved 25%!');
-    } else if (luckyNumber == 3 ) {
-        discountPercent = .35;
-        alert('35% off for you!');
-    } else if (luckyNumber == 4 ) {
-        discountPercent = .50;
-        alert('Nice! You get 50% off today!');
-    } else if (luckyNumber == 5 ) {
-        discountPercent = 100;
-        alert('Congratulations! You get everything for free!');
-
-    }
-
-    //this doesn't work for amounts over 100
-    var discountPercent = (discountPercent * 100);
-    console.log('Amount saved from discount (in dollars):' + discountPercent);
-
-    var newDiscountedPriceInDollars = totalAmount - discountPercent;
-    console.log('new price:' + newDiscountedPriceInDollars);
-}
+//
+// function calculateTotal(totalAmount, luckyNumber) {
+//
+//     if (luckyNumber === 0) {
+//         discountPercent = alert('sorry, no discount today!');
+//         console.log('no discount, customer pays full price:' + totalAmount);
+//     } else if (luckyNumber == 1 ) {
+//         discountPercent = .1;
+//         alert('10% off for you! A penny saved is a penny earned :)');
+//     } else if (luckyNumber == 2 ) {
+//         discountPercent = .25;
+//         alert('You saved 25%!');
+//     } else if (luckyNumber == 3 ) {
+//         discountPercent = .35;
+//         alert('35% off for you!');
+//     } else if (luckyNumber == 4 ) {
+//         discountPercent = .50;
+//         alert('Nice! You get 50% off today!');
+//     } else if (luckyNumber == 5 ) {
+//         discountPercent = 100;
+//         alert('Congratulations! You get everything for free!');
+//
+//     }
+//
+//     //this doesn't work for amounts over 100
+//     var discountPercent = (discountPercent * 100);
+//     console.log('Amount saved from discount (in dollars):' + discountPercent);
+//
+//     var newDiscountedPriceInDollars = totalAmount - discountPercent;
+//     console.log('new price:' + newDiscountedPriceInDollars);
+// }
 
 // calculateTotal(100, 5);
 
