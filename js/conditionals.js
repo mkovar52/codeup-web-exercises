@@ -243,6 +243,10 @@
  */
 //Fer's approach
 
+function test() {}
+
+
+
 function calculateTotal(luckyNumber, total) {
     var discountedPrice;
 
