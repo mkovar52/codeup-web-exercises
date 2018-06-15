@@ -1,9 +1,9 @@
 // ================ SIMPLE FUNCTION DRILLS
 
-use strict;
+"use strict";
 
 // IIFE START
-(function (){
+// (function (){
 
 // 1) Make a function called returnTwo() that returns the number 2 when called
 // ---Test this function with console.log(returnTwo())
@@ -39,12 +39,12 @@ use strict;
 // 4) Make a function called sayString() which returns the string input passed in.
 // ---Test this function with console.log(sayString())
 
-    function sayString(string) {
-        console.log('this is input:\n', string);
-        return string;
-    }
-
-    console.log(sayString("Hello World"));
+    // function sayString(string) {
+    //     console.log('this is input:\n', string);
+    //     return string;
+    // }
+    //
+    // console.log(sayString("Hello World"));
 
 // 5) Make a function called sayHowdy() which console.logs the string “Howdy!”
 // ---Test this function by directly calling sayHowdy()
@@ -56,26 +56,26 @@ use strict;
                     //     console.log(sayHowdy());
 
 //    second approach 6/14/18, works much better.
-    function sayHowdy() {
-        return "Howdy!";
-    }
-
-    console.log(sayHowdy());
-
+//     function sayHowdy() {
+//         return "Howdy!";
+//     }
+//
+//     console.log(sayHowdy());
+//
 
 // ---Remember this function does not need a defined return value
 
 
 // function made to return average between variables a & b
 
-function getAverage(a, b) {
-    var average = (a + b) / 2;
-    console.log(average);
-    return average;
-}
-
-var myAverage = getAverage(15, 15);
-console.log(('the average is ' + myAverage));
+// function getAverage(a, b) {
+//     var average = (a + b) / 2;
+//     console.log(average);
+//     return average;
+// }
+//
+// var myAverage = getAverage(150, 100);
+// console.log(('the average is ' + myAverage));
 
 // var myAverage = getAverage(20, 1);
 // console.log(('the average is ' + myAverage));
@@ -93,10 +93,13 @@ console.log(('the average is ' + myAverage));
 // ================ CHALLENGE FUNCTION DRILLS
 // Write a function called `identity(input)` that takes in an argument called input and returns that input.
 
-    function identity(input) {
-
+function identity(input) {
+    return input;
     }
 
+console.log(identity("mykel"));
+console.log(identity(99));
+// why doesn't this take other
 
 
 // Write a function called `getRandomNumber(min, max)` that returns a random number between min and max values sent to that function call.
@@ -128,5 +131,5 @@ console.log(('the average is ' + myAverage));
 
 
 //IIFE END
-
-})();
+//
+// })();
