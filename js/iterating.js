@@ -1,12 +1,26 @@
 (function(){
     "use strict";
 
+    // var studentNames = ['Mykel', 'Frank', 'Joseph', 'Dennis', 'Millie', 'Milagro', 'Malibu'];
+
+    // function greet(input) {
+    //     var greeting = 'Hello! ' + input + ' it\'s nice to meet you!';
+    //     console.log(greeting);
+    // }
+    //
+    // studentNames.forEach(greet);
+    //
+    // studentNames.forEach(function(input) {
+    //     var greeting = 'Hello! ' + input + ' it\'s nice to meet you!';
+    //     console.log(greeting);
+    // });
+
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-var names = ['Mykel', 'Malibu', 'Millie', 'Dennis'];
+// var names = ['Mykel', 'Malibu', 'Millie', 'Dennis'];
 
 
 
@@ -17,7 +31,7 @@ var names = ['Mykel', 'Malibu', 'Millie', 'Dennis'];
      * array.
      */
 
-    console.log(names.length);
+    // console.log(names.length);
 
 
     /**
@@ -45,10 +59,11 @@ var names = ['Mykel', 'Malibu', 'Millie', 'Dennis'];
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
-    names.forEach(function(name) {
-        console.log('my name is: ' + name + '.');
-    });
+    //
+    // names.forEach(
+    //     function(name) {
+    //     console.log('Hello, my name is: ' + name + '.');
+    // });
 
     /**
      * TODO:
@@ -67,13 +82,95 @@ var names = ['Mykel', 'Malibu', 'Millie', 'Dennis'];
      */
 //     function one - return first item in an array
 
-    function returnFirstItem(array) {
-        return array[0];
-    }
+//     var numbers = [1, 2, 3, 4, 5];
+//
+//
+//     function returnFirstItem(input) {
+//         return numbers[0];
+//     }
+//
+//     function returnSecondItem(input) {
+//         return numbers[1];
+//     }
+//
+//     // what if I didn't know the number of items in the array? array.length-1?
+//     // included the -1 here, but it actually pulls up number 4. Why?
+        //         could have potentially 'removed item without knowing it...
+//     //
+//     function returnLastItem(input) {
+//         return numbers.length-2;
+//     }
+//
+// console.log(returnFirstItem(numbers));
+// console.log(returnSecondItem(numbers));
+// console.log(returnLastItem(numbers));
 
-    function returnSecondItem(array) {
-        return
-    }
+
+ // ********    END OF ITERATING LESSONG ******** \\\\\
+
+
+/// ** Manipulation with Arrays BELOW  DONE ON 6/19/18 *** \\\\
+
+    // var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday'];
+    //
+    // console.log(daysOfTheWeek);
+    //
+    // daysOfTheWeek.unshift('Sunday');
+    // daysOfTheWeek.push('Friday', 'Saturday');
+    // console.log(daysOfTheWeek.length);
+    //
+    // console.log(daysOfTheWeek.indexOf('Wednesday'));
+
+
+    var langs = ['Javascript', 'CSS', 'HTML', 'Java'];
+
+    console.log(langs[0]);
+
+    //unshift goes to the beginning
+    langs.unshift('Groovy');
+
+    //Groovy now becomes the index of 0.
+    //size of the array - 1. 5 langs, but access the last by calling 4.
+    console.log(langs[0]);
+
+    langs.push('PHP');
+    console.log(langs);
+
+    // langs.shift();
+    langs.shift();
+    // langs.pop();
+
+    //position 0 of array is being replaced with new value on the right
+    langs[0] = 'SCSS';
+
+    // this user entered value isn't permanently stored
+    // langs.push(prompt('What is your favorite programming language?'));
+    //index's are dynamic and move around , so don't rely on them to
+
+
+    console.log('index of HTML is: ' + langs.indexOf('HTML'));
+
+    //forEach and annonym function need to be used together??
+    //not using this again, so it's ok to be an annoymn. function.
+    //better to read and remember what this function is accepting
+    //index is predefined and how it logs the indecies associated with the array items.
+    langs.forEach(function(lang, index) {
+
+        console.log('I will learn: ' + lang + ' index ' + index);
+    });
+
+
+//    pop deletes last item, shift deletes first
+
+
+// last available index you used
+
+
+
+
+
+
 
 
 })();
+
