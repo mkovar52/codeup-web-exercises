@@ -73,22 +73,22 @@
 // possible to re-factor the block of code by setting a variable inside of the function, then use return at the
 // end with that variable.
 
-//
+
 // function analyzeColor(color) {
-    // if (color === 'blue') {
-    //     return color + ' is the color of the sky';
-    // } else if (color === 'red') {
-    //     return 'strawberries are ' + color;
-    // } else if (color === 'green') {
-    //     return 'grass is ' + color;
-    // } else if (color === 'yellow') {
-    //     return 'Bananas are ' + color;
-    // //    included else to catch errors.
-    // } else {
-    //     return color + ' is not a valid color';
-    // }
-//     //
-//
+//     if (color === 'blue') {
+//         return color + ' is the color of the sky';
+//     } else if (color === 'red') {
+//         return 'strawberries are ' + color;
+//     } else if (color === 'green') {
+//         return 'grass is ' + color;
+//     } else if (color === 'yellow') {
+//         return 'Bananas are ' + color;
+//     //    included else to catch errors.
+//     } else {
+//         return color + ' is not a valid color';
+//     }
+
+
 //     var result;
 //
 //     switch (color) {
@@ -124,8 +124,9 @@
 // console.log(analyzeColor(null));
 // console.log(analyzeColor(1000));
 
-
-
+// var userInputColor = prompt('What color do you like?');
+// analyzeColor(userInputColor);
+//
 // function analyzeColor(colorName) {
 //     if (colorName == 'red') {
 //         alert('Strawberries are red.');
@@ -153,11 +154,6 @@
 //     }
 //     if (colorName == 'green') {
 //         alert('Grass is green... At least it should be.');
-//     }
-// }
-
-//     else {
-//         alert('No one likes ' + colorName);
 //     }
 // }
 
@@ -210,11 +206,12 @@
 
 // var userInputColor = prompt('What color do you like?');
 // analyzeColor(userInputColor);
-
-
-// alert(analyzeColor(prompt('Give me a color'))); one-liner from Fer 6/15/18
-
-// step-by-step of the process above is:
+//
+//
+// alert(analyzeColor(prompt('Give me a color')));
+// // one-liner from Fer 6/15/18
+//
+// // step-by-step of the process above is:
 // var usersColor = prompt('Give me a color');
 // var res = analyzeColor(usersColor);
 // alert(res);
@@ -243,44 +240,44 @@
  */
 //Fer's approach
 
-function test() {}
+// function test() {}
 
 
 
-function calculateTotal(luckyNumber, total) {
-    var discountedPrice;
-
-    switch (luckyNumber) {
-        case 0:
-            discountedPrice = total;
-            break;
-        case 1:
-            discountedPrice = total * (0.90);
-            break;
-        case 2:
-            discountedPrice = total * (0.75);
-            break;
-        case 3:
-            discountedPrice = total* (0.65);
-            break;
-        case 4:
-            discountedPrice = total * (0.50);
-            break;
-        case 5:
-            discountedPrice = 0;
-            break;
-        default:
-            discountedPrice = 'invalid lucky number';
-    }
-
-    return discountedPrice;
-}
+// function calculateTotal(luckyNumber, total) {
+//     var discountedPrice;
+//
+//     switch (luckyNumber) {
+//         case 0:
+//             discountedPrice = total;
+//             break;
+//         case 1:
+//             discountedPrice = total * (0.90);
+//             break;
+//         case 2:
+//             discountedPrice = total * (0.75);
+//             break;
+//         case 3:
+//             discountedPrice = total* (0.65);
+//             break;
+//         case 4:
+//             discountedPrice = total * (0.50);
+//             break;
+//         case 5:
+//             discountedPrice = 0;
+//             break;
+//         default:
+//             discountedPrice = 'invalid lucky number';
+//     }
+//
+//     return discountedPrice;
+// }
 //helps to increase the number variant to ensure the default value in the switch works correctly.
 
-var luckyNumber = Math.floor(Math.random() * 6);
-
-console.log(luckyNumber);
-console.log(calculateTotal(luckyNumber, 100));
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+// console.log(luckyNumber);
+// console.log(calculateTotal(luckyNumber, 100));
 
 // luckyNumber = Math.floor(Math.random() * 6);
 // console.log(luckyNumber);
