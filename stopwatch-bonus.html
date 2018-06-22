@@ -5,8 +5,10 @@
     <title>Create a Stopwatch</title>
 </head>
 <body>
-<h1>Stopwatch Bonus</h1>
-
+<h1>Stopwatch</h1>
+<button id="startBtn">Start|></button>
+<button id="'stopBtn">Pause =</button>
+<button id="resetBtn">Reset *</button>
 
 <!--Instructions:
 BONUS 2: Build a Stop Watch
@@ -23,30 +25,31 @@ Include the following methods...
 Test in console first then transfer to browser  -->
 
 <script>
-
-    stopWatch.start();
-
     (function() {
         "use strict";
+
 
         var stopWatch = {
             intervalId:10,
             count:10,
 
-            start: function (){
+            start: function () {
                 console.log('now starting');
+            },
+            pause: function() {
+                console.log('You paused me');
+            },
+            reset: function() {
+                console.log('reset time')
+
             }
 
         };
 
 
-
-
-
-
-
-
-
+        console.log(stopWatch.start);
+        console.log(stopWatch.pause);
+        console.log(stopWatch.reset);
 
 
     })();
