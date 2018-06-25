@@ -89,42 +89,29 @@
 //create a function that will take 1 input.
 // the last character of the string will ALWAYS be a number, so I can separate it from the given input
 //then compare the length of the newString vs. the number
-//The way I choose to solve this with reverse causes double-digit numbers to break it.
-//ASK on a way to address this issue.
-
-
 function strCheck(input) {
+    console.log('this is input ' + input);
 
-    // console.log('this is input ' + input);
 
     var inputArray = input.split('');
-    var inputRev = inputArray.reverse();
-    console.log('inputSplit rev = ' + inputRev);
+    console.log('inputSplit var = ' + inputArray);
+    console.log('inputSplit length = ' + inputArray(index));
+    // console.log('length = ' + inputArray.length);
+    // console.log('should be number val: ' + (inputArray.length-1));
 
-    if (parseInt(inputRev) == (input.length-1)) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+
+    // var inputNumber = input.length-1;
+    // console.log('should be number value ' + input.length-2);
+
+    // if (inputString == inputNumber) {
+    //     return "Yes";
+    // } else {
+    //     return "No";
+    // }
 }
 
 console.log(strCheck("Mykel5"));
-//yes
-// console.log(strCheck("M11"));
-// //no
-//
+//Yes
+
 // console.log(strCheck("Mykel7"));
-// //No
-//
-// console.log(strCheck("HopE4"));
-// //yes
-//
-// console.log(strCheck("mykelmyke9"));
-// //yes
-//
-// console.log(strCheck("mykelmykelmykelmykel20"));
-//yes, but the zero reversed is throwing it off.
-
-
-
-
+//No

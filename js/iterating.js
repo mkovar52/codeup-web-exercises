@@ -2,13 +2,13 @@
     "use strict";
 
     // var studentNames = ['Mykel', 'Frank', 'Joseph', 'Dennis', 'Millie', 'Milagro', 'Malibu'];
-
-    // function greet(input) {
-    //     var greeting = 'Hello! ' + input + ' it\'s nice to meet you!';
-    //     console.log(greeting);
-    // }
     //
-    // studentNames.forEach(greet);
+    // // function greet(input) {
+    // //     var greeting = 'Hello! ' + input + ' it\'s nice to meet you!';
+    // //     console.log(greeting);
+    // // }
+    // //
+    // // studentNames.forEach(greet);
     //
     // studentNames.forEach(function(input) {
     //     var greeting = 'Hello! ' + input + ' it\'s nice to meet you!';
@@ -81,10 +81,8 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 //     function one - return first item in an array
-
 //     var numbers = [1, 2, 3, 4, 5];
-//
-//
+
 //     function returnFirstItem(input) {
 //         return numbers[0];
 //     }
@@ -106,9 +104,7 @@
 // console.log(returnLastItem(numbers));
 
 
- // ********    END OF ITERATING LESSONG ******** \\\\\
-
-
+ // ********    END OF ITERATING LESSON ******** \\\\\
 /// ** Manipulation with Arrays BELOW  DONE ON 6/19/18 *** \\\\
 
     // var daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday'];
@@ -121,48 +117,45 @@
     //
     // console.log(daysOfTheWeek.indexOf('Wednesday'));
 
-
     var langs = ['Javascript', 'CSS', 'HTML', 'Java'];
 
-    console.log(langs[0]);
+    // console.log('I have already learned ' + langs[1]);
+    // console.log('But have NOT seen ' + langs[3] + ' yet.');
 
-    //unshift goes to the beginning
-    langs.unshift('Groovy');
+    // //unshift goes to the beginning
+    // langs.unshift('Groovy');
+    // console.log(langs);
 
-    //Groovy now becomes the index of 0.
-    //size of the array - 1. 5 langs, but access the last by calling 4.
-    console.log(langs[0]);
+    // //Groovy now becomes the index of 0.
+    // //size of the array - 1. 5 langs, but access the last by calling 4.
+    // console.log(langs[0]);
 
-    langs.push('PHP');
-    console.log(langs);
+    // langs.push('PHP');
+    // console.log(langs);
 
+    // // langs.shift();
     // langs.shift();
-    langs.shift();
-    // langs.pop();
+    // // langs.pop();
 
-    //position 0 of array is being replaced with new value on the right
-    langs[0] = 'SCSS';
+    // //position 0 of array is being replaced with new value on the right
+    // langs[0] = 'SCSS';
 
-    // this user entered value isn't permanently stored
+    // this user entered value IS NOT permanently stored
     // langs.push(prompt('What is your favorite programming language?'));
     //index's are dynamic and move around , so don't rely on them to
 
-
-    console.log('index of HTML is: ' + langs.indexOf('HTML'));
+    // console.log('index of HTML is: ' + langs.indexOf('HTML'));
 
     //forEach and annonym function need to be used together??
     //not using this again, so it's ok to be an annoymn. function.
     //better to read and remember what this function is accepting
-    //index is predefined and how it logs the indecies associated with the array items.
-    langs.forEach(function(lang, index) {
-
-        console.log('I will learn: ' + lang + ' index ' + index);
-    });
+    //index is predefined and how it logs the indexes associated with the array items.
+    // langs.forEach(function(lang, index) {
+    //     console.log('I will learn: ' + lang + ' index ' + index);
+    // });
 
 
 //    pop deletes last item, shift deletes first
-
-
 // last available index you used
 
 

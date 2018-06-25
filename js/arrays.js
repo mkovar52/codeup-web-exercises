@@ -57,7 +57,6 @@
 //once you sort a list, you CHANGE the original version of it. Changes cannot be reverted.
 // You can customize sort to an array but this requires additional work.
 
-
 var phoneNumbers = '210-555-5555 \n 210-777-5555 \n 210-888-5555';
 
 function cleanNumbers(phoneNums) {
@@ -67,7 +66,7 @@ function cleanNumbers(phoneNums) {
     console.log(phoneNumsArr);
 
     phoneNumsArr.forEach(function(phoneNum) {
-        //formatted version
+        //formatted version where split removes the - and join'' pushes each number together.
         var formattedPhoneNum = phoneNum.split("-").join("");
         cleanNumsArr.push(formattedPhoneNum);
     });

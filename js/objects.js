@@ -12,6 +12,16 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+
+    //FUNCTION to generate random number between 1-27.
+    // function getRandomInt(min, max) {
+    //     return Math.floor(Math.random() * (max - min + 1) + min);
+    // }
+    //
+    // var random = getRandomInt(1, 27);
+    // console.log(random);
+
+
 //    make sure I understand how to use the "this" keyword correctly.**
 // var person = {
 //         firstName: "Mykel",
@@ -53,32 +63,32 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
-// ARRAY with objects inside of it.
-    var shoppers = [
-        //shopper 1 @ 0 index
-        {name: 'Cameron', amount: 180},
-
-        //shopper2 @ 1 index
-        {name: 'Ryan', amount: 250},
-
-        //shopper 3 @ index 2
-        {name: 'George', amount: 320}
-    ];
-
-
-function hebDiscountCheck() {
-
-    for (var i = 0; i < shoppers.length; i += 1) {
-        if (shoppers[i].amount > 200) {
-            console.log(shoppers[i].name + ' You earned 12% off!');
-            console.log('Your new total is ' + shoppers[i].amount * .88);
-        }
-        else {
-            console.log('Hello, ' + shoppers[i].name + '! Your order total is' + shoppers[i].amount);
-        }
-    }
-}
+//
+// // ARRAY with objects inside of it.
+//     var shoppers = [
+//         //shopper 1 @ 0 index
+//         {name: 'Cameron', amount: 180},
+//
+//         //shopper2 @ 1 index
+//         {name: 'Ryan', amount: 250},
+//
+//         //shopper 3 @ index 2
+//         {name: 'George', amount: 320}
+//     ];
+//
+//
+// function hebDiscountCheck() {
+//
+//     for (var i = 0; i < shoppers.length; i += 1) {
+//         if (shoppers[i].amount > 200) {
+//             console.log(shoppers[i].name + ' You earned 12% off!');
+//             console.log('Your new total is ' + shoppers[i].amount * .88);
+//         }
+//         else {
+//             console.log('Hello, ' + shoppers[i].name + '! Your order total is' + shoppers[i].amount);
+//         }
+//     }
+// }
 
 // hebDiscountCheck(shoppers);
 
@@ -152,22 +162,21 @@ function hebDiscountCheck() {
      *      ...
      */
 
-// function bookCheck() {
-//     for (var i = 0; i < books.length; i += 1) {
-//         //the i + 1 because list starts at 0!
-//         console.log('Book # ' + (i+1));
-//         console.log('Title: ' + books[i].title);
-//         //didn't concatenate the i
-//         console.log('Author: ' + books[i].author.firstName + " " + books[i].author.lastName);
-//         console.log('----');
-//         console.log('...');
-//     }
-// }
-//
-// bookCheck(books);
+function bookCheck() {
+    for (var i = 0; i < books.length; i += 1) {
+        //the i + 1 because list starts at 0. don't want to have book #0.
+        console.log('Book # ' + (i+1));
+        console.log('Title: ' + books[i].title);
+        //didn't concatenate the i
+        console.log('Author: ' + books[i].author.firstName + " " + books[i].author.lastName);
+        console.log('----');
+        console.log('...');
+    }
+}
 
-    // .forEach is alternative method to for loop
-    //
+bookCheck(books);
+
+    // .forEach is alternative method to for loop.
     // books.forEach(function (book, i) {
     //     console.log('Book # ' + (i+1));
     //     console.log('Title: ' + books[i].title);
@@ -177,13 +186,6 @@ function hebDiscountCheck() {
     //     console.log('...');
     // });
 
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-
-    var random = getRandomInt(1, 27);
-    console.log(random);
 
     /**
      * Bonus:
@@ -201,21 +203,22 @@ function hebDiscountCheck() {
        they actually show up as 'null' values.
          */
 
-//     var bookTitle = books.push(prompt('What\'s the book title you\'d like to add?'));
-//     var authorFirstName = books.firstName(prompt('What is the author\'s first name?'));
-//     var authorLastName = books.lastName(prompt('What is the author\'s last name?'));
-//
-//     console.log(bookTitle);
-//     console.log(authorFirstName);
-//     console.log(authorLastName);
-// console.log(books);
-
-    // function createBook(inputTitle, inputFname, inputLname) {
-    //     var inputTitle =
-    //
-    // }
+    var bookTitle = prompt('What\'s the title of the book you\'d like to add?');
+    var firstName = prompt('What\'s the authors first name?');
+    var lastName = prompt('What\'s the authors last name?');
 
 
+    function createBook(bookTitle, firstName, lastName) {
+        var book = {
+            title: bookTitle,
+            firstName: firstName,
+            lastName: lastName
+        }
 
+        books.push(book);
+    }
+
+    createBook(bookTitle, firstName, lastName);
+    console.log(books);
 
 })();

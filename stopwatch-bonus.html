@@ -32,7 +32,7 @@ Test in console first then transfer to browser  -->
         var stopWatch = {
             intervalId:10,
             count:10,
-
+            name: 'Mykel\'s Stopwatch',
             start: function () {
                 console.log('now starting');
             },
@@ -46,10 +46,15 @@ Test in console first then transfer to browser  -->
 
         };
 
+        stopWatch.start();
+        stopWatch.pause();
+        stopWatch.reset();
+        console.log(stopWatch.name);
 
-        console.log(stopWatch.start);
-        console.log(stopWatch.pause);
-        console.log(stopWatch.reset);
+
+        // console.log(stopWatch.start);
+        // console.log(stopWatch.pause);
+        // console.log(stopWatch.reset);
 
 
     })();

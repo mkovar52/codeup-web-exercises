@@ -95,7 +95,7 @@
 // ****** \\
 
 
-// Bonus 3
+// Bonus 3 ***********
 // Create a function that prompts a user for a season (Spring, Summer, Fall (or Autumn), Winter). XX
 // The function then alerts the months available in that season and then asks the user to pick a given month.
 // After selecting the month, alert a unique message for the month.

@@ -57,7 +57,14 @@
 
 //     VOLUME = length x width x height
 //     {title: "Xfactor Biography", author:{firstName:"Mykel",lastName: 'Kovar'}},
-var building = { roomName: "Living Room", specs:{length: , width: , height:  },
+var building = {
+        roomName: "Living Room",
+        length:10 ,
+        width:10 ,
+        height:10
+
+    };
+
 
 
 
