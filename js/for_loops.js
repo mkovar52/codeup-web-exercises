@@ -91,6 +91,12 @@
 //     console.log(output);
 // }
 
+
+for (var i = 1; i <= 9; i++) {
+    i = i.toString();
+    console.log(i.repeat(i));
+}
+
 // repeat option, much shorter.
 // for (var i = 1; i <=9; i++) {
 //     var output = i + "";
