@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        (function() {
+        "use strict";
+
+            // var allowedKeys = {
+            //     ArrowLeft: 'ArrowUp',
+            //     ArrowRight: 'ArrowRight',
+            //     Up: 'Up',
+            //     Down: 'Down',
+            //     A: 'A',
+            //     B: 'B',
+            //     Enter: 'Enter'
+            // };
+
+            var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+
+            var konamiCodePosition = 0;
+
+            $(document).keyup(function(e){
+                console.log(e.key);
+
+                var key = e.key;
+                var requiredKey = konamiCode[konamiCodePosition];
+                console.log(key);
+
+                if (key == requiredKey) {
+                    konamiCodePosition += 1;
+                    // console.log('this is pos:' + konamiCodePosition);
+                    // console.log('this is step of code:' + key);
+
+                    if (konamiCodePosition == konamiCode.length) {
+                        activateCheat();
+                        konamiCodePosition = 0;
+                    } else {
+
+                    }
+                }
+
+            });
+
+            function activateCheat() {
+                console.log('this is triggered');
+                alert('you unlocked the cheat!');
+            }
+
+
+
+        })();
+
+    //    up, up, down, down, left, right, left, right, b, a, enter
+    </script>
+</body>
+</html>
