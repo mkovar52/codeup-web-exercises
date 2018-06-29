@@ -7,18 +7,42 @@
 
 
 
-$('#playBtn').css('background-color', 'blue');
+$(function(){
 
-$('#playBtn').click(function() {
-
+    $('#playBtn').click(function() {
     $('#playOutput').text($('#playInput').val());
-})
+    });
+
+    $('#playBtn').css('background-color', 'blue');
 
     //add event listener is replaced by on here.
-    $('.important').on('mouseover', function() {
-        $(this).css('background-color', 'yellow');
+    // $('.important').on('mouseover', function() {
+    //     $(this).css('background-color', 'yellow');
+    //
+    // });
 
-    })
+    $('.mainContainer').css('font-family', 'helvetica');
+    $('#header').css('text-align', 'center');
+
+    // alert($('#snowboard').text());
+    // alert($('#double').text());
+
+    $('#double').click(function() {
+        $('#playOutput').text($('#playInput').val());
+    });
+
+    $('.codeup').css('border', '3px solid red');
+    $('p').css('width', '500px');
+
+    // can chain as many as we need, like the li element below.
+    $('li').css('font-size', '20px').css('background-color', 'blue');
+    $('h1, p').css('background-color', 'yellow');
+    $('h3').css('text-align', 'center').css('background-color', 'aqua');
+
+    alert($('h1').text());
+
+})
+
 
 
 
