@@ -6,57 +6,68 @@
     <link rel="stylesheet" type="text/css" href="css/faq-style.css">
 </head>
 <body>
-    <div class="mainContainer">
-        <h1 id="header">jQuery FAQ Page</h1>
-        <button id="showAnswers">Show All Answers</button>
+<!-- Main Container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="header" class="display-4" >FAQ Page</h1>
+                <button id="showAnswers" class="bg-secondary mb-3">Show All</button>
+            </div>
+        </div>
 
-        <h5>Question 1</h5>
-            <p class="invisible" id="answer1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
-                culpa deserunt, dicta dolore doloribus.
-            </p>
-
-        <h5>Question 2</h5>
-        <p class="invisible" id="answer2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-
-        <h5>Question 3</h5>
-        <p class="invisible" id="answer3">Lorem ipsum dolor sit amet.
-        </p>
-
-        <h5>Question 4</h5>
-        <p class="invisible" id="answer4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
-            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum.
-        </p>
-
-        <h5>Question 5</h5>
-        <p class="invisible" id="answer5">Lorem ipsum.
-        </p>
-
-        <h5>Question 6</h5>
-        <p class="invisible" id="answer6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
-            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum, necessitatibus
-            nesciunt non numquam saepe tenetur totam veritatis. Cupiditate, possimus!
-        </p>
-
-        <h5>Question 7</h5>
-        <p class="invisible" id="answer7">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-
-        <h5>Question 8</h5>
-        <p class="invisible" id="answer8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur.
-        </p>
-
-        <h5>Question 9</h5>
-        <p class="invisible" id="answer9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
-            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum, necessitatibus
-            nesciunt non numquam saepe tenetur totam veritatis. Cupiditate, possimus!
-        </p>
-
-        <h5>Question 10</h5>
-        <p class="invisible" id="answer10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
-            culpa deserunt, dicta dolore doloribus, eaque fugit hi.
-        </p>
+        <!-- FAQ Table -->
+        <dl>
+            <dt>Question 1</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 2</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 3</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 4</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 5</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 6</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 7</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 8</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 9</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+            <dt>Question 10</dt>
+            <dd class="invisible">
+                <strong>A:</strong>
+                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
+            </dd>
+        </dl>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -66,13 +77,36 @@
         "use strict";
         (function() {
 
-            $('#showAnswers').click(function() {
-                $('p').toggleClass('invisible');
-            }, function(){
-                $('p').toggleClass('invisible');
-                }
-            );
 
+            //toggle all answers
+            $('#showAnswers').click(function() {
+                $('dd').toggleClass('invisible');
+
+            }, function() {
+                $('dd').toggleClass('invisible');
+
+            });
+
+            //click listener to highlight dt elements
+            $('dt').click(function() {
+                $(this).toggleClass('highlighted');
+            });
+
+            //globalVar to
+            var questions = 0;
+            $('dt').each(function(){
+                questions++;
+                console.log($(this).text());
+            });
+
+            console.log(questions);
+
+
+            $('dt').children().click(function(){
+                alert('why would you cick here?');
+            })
+
+        //IFFE END
         })();
 
     </script>

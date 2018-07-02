@@ -1,3 +1,18 @@
+body {
+    background-color: papayawhip;
+}
+
 .invisible {
     display: none;
+}
+
+
+
+.highlighted {
+    background-color: #bada55;
+    width: 95px;
+}
+
+dd {
+    margin-left: 10px;
 }
