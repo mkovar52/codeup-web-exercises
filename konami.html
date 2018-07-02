@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Konami Code</title>
+    <title>Konami</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/konami-style.css">
 </head>
-<body>
-    <h1>Konami Code</h1>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script>
-        (function() {
-        "use strict";
-
-            // var allowedKeys = {
-            //     ArrowLeft: 'ArrowUp',
-            //     ArrowRight: 'ArrowRight',
-            //     Up: 'Up',
-            //     Down: 'Down',
-            //     A: 'A',
-            //     B: 'B',
-            //     Enter: 'Enter'
-            // };
-
-            var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
-
-            var konamiCodePosition = 0;
-
-            $(document).keyup(function(e){
-                console.log(e.key);
-
-                var key = e.key;
-                var requiredKey = konamiCode[konamiCodePosition];
-                console.log(key);
-
-                if (key == requiredKey) {
-                    konamiCodePosition += 1;
-                    // console.log('this is pos:' + konamiCodePosition);
-                    // console.log('this is step of code:' + key);
-
-                    if (konamiCodePosition == konamiCode.length) {
-                        activateCheat();
-                        konamiCodePosition = 0;
-                    } else {
-
-                    }
-                }
-
-            });
-
-            function activateCheat() {
-                console.log('this is triggered');
-                alert('you unlocked the cheat!');
-            }
-
-
-
-        })();
-
-    //    up, up, down, down, left, right, left, right, b, a, enter
-    </script>
-</body>
+    <body>
+    <!-- Jumbotron -->
+        <div class="jumbotron jumbotron-fluid mb-0">
+            <div class="heading-bg-container px-4">
+                <h1 class="display-4">Konami</h1>
+                <p class="lead">"Those who seek shall find"<br><em>-Someone old and wise</em></p>
+            </div>
+        </div>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-0 py-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main Container -->
+        <div class="container-fluid pb-5">
+            <!-- Page header row -->
+            <div class="row">
+                <h2 class="mx-auto mt-4">Insert Catchy Heading Here:</h2>
+            </div>
+            <hr>
+            <!--Row body columns are in -->
+            <div class="row">
+                <!-- Column containing lorem ipsum -->
+                <div id="loremIpsumContainer" class="col-12 col-sm-6 mt-3">
+                    <h2>If opportunity doesn't knock, build a door.</h2>
+                    <h5>-Milton Berle</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fuga fugit pariatur
+                        quibusdam tempore. Accusantium alias asperiores corporis cumque, dolorum eaque eum perferendis,
+                        repellendus sequi, sint
+                        tenetur veritatis vero voluptatem.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fuga fugit pariatur
+                        quibusdam tempore. Accusantium alias asperiores corporis cumque, dolorum eaque eum perferendis,
+                        repellendus sequi, sint
+                        tenetur veritatis vero voluptatem.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fuga fugit pariatur
+                        quibusdam tempore. Accusantium alias asperiores corporis cumque, dolorum eaque eum perferendis,
+                        repellendus sequi, sint
+                        tenetur veritatis vero voluptatem.
+                    </p>
+                </div>
+                <!-- Column for right side of body -->
+                <div class="col-12 col-sm-6 mt-3">
+                    <!-- insert right side content here -->
+                    <img class="tRexGif" src="trex.gif">
+                </div>
+                <!-- end of the right side container-->
+            </div>
+            <hr>
+            <!-- Hidden Audio file -->
+            <audio controls preload="none" id="trexRoar">
+                <source src="resources/trex.mp3" type="audio/mpeg">
+            </audio>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="js/konami-script.js"></script>
+    </body>
 </html>
+

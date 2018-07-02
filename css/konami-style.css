@@ -1,0 +1,35 @@
+body {
+    height: 1000px;
+}
+
+h1, .lead {
+    text-align: center;
+}
+/* Hidden T-rex Audio */
+audio {
+    display: none;
+}
+
+.jumbotron {
+    background-image: url("images/san-antonio.jpg");
+    height: 550px;
+    padding-top: 25px;
+    opacity: 0.75;
+}
+
+.heading-bg-container {
+    background-color: papayawhip;
+    display: inline-block;
+    opacity: 0.95;
+}
+
+.display-4, .lead {
+    color: black;
+}
+
+.quote-container {
+    height: 250px;
+    text-align: center;
+}
+
+
