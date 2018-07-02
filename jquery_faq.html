@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery FAQ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/faq-style.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <h1 id="header">jQuery FAQ Page</h1>
+        <button id="showAnswers">Show All Answers</button>
+
+        <h5>Question 1</h5>
+            <p class="invisible" id="answer1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+                culpa deserunt, dicta dolore doloribus.
+            </p>
+
+        <h5>Question 2</h5>
+        <p class="invisible" id="answer2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+
+        <h5>Question 3</h5>
+        <p class="invisible" id="answer3">Lorem ipsum dolor sit amet.
+        </p>
+
+        <h5>Question 4</h5>
+        <p class="invisible" id="answer4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum.
+        </p>
+
+        <h5>Question 5</h5>
+        <p class="invisible" id="answer5">Lorem ipsum.
+        </p>
+
+        <h5>Question 6</h5>
+        <p class="invisible" id="answer6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum, necessitatibus
+            nesciunt non numquam saepe tenetur totam veritatis. Cupiditate, possimus!
+        </p>
+
+        <h5>Question 7</h5>
+        <p class="invisible" id="answer7">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+
+        <h5>Question 8</h5>
+        <p class="invisible" id="answer8">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur.
+        </p>
+
+        <h5>Question 9</h5>
+        <p class="invisible" id="answer9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+            culpa deserunt, dicta dolore doloribus, eaque fugit hic in laborum, necessitatibus
+            nesciunt non numquam saepe tenetur totam veritatis. Cupiditate, possimus!
+        </p>
+
+        <h5>Question 10</h5>
+        <p class="invisible" id="answer10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consequuntur
+            culpa deserunt, dicta dolore doloribus, eaque fugit hi.
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        "use strict";
+        (function() {
+
+            $('#showAnswers').click(function() {
+                $('p').toggleClass('invisible');
+            }, function(){
+                $('p').toggleClass('invisible');
+                }
+            );
+
+        })();
+
+    </script>
+</body>
+
