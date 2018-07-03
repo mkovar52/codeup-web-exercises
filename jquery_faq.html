@@ -10,9 +10,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1 id="header" class="display-4" >FAQ Page</h1>
+                <div id="newsletter">
+                    <h1>Would you like to sign up for our newsletter?</h1>
+                    <span>x</span>
+                </div>
+                <hr>
+                <h2 id="header" class="display-4" >FAQ Page</h2>
                 <!-- show answers button -->
-                <button id="showAnswers" class="bg-secondary mb-3">Show All</button>
+                <button id="showAnswers" class="btn btn-outline-info mb-3">Show All</button>
             </div>
         </div>
 
@@ -39,8 +44,7 @@
                 <small class="text-muted">Lorem ipsum dolor sit amet.</small>
             </dd>
         </dl>
-
-        <div id="parkFacts">
+        <h1 class="display-4">Popular Parks</h1>
             <h3>First Park</h3>
             <ul id="firstParkFacts">
                 <li>Fact #1</li>
@@ -63,11 +67,23 @@
                 <li>Fact #4</li>
             </ul>
             <!-- highlight li button -->
-            <button id="highlighLastFact" class="bg-secondary mb-3 ml-2">Highlight Park Facts</button>
+            <button id="highlighLastFact" class="btn btn-outline-warning mb-3 ml-2">Highlight Park Facts</button>
+        <div id="userLogin">
+            <div class="row">
+                <div class="col-12">
+                    <h4 id="registerHeading" class="display-5">Please register for the site.</h4>
+                    <form method="POST" action="login">
+                        <label for="username"></label>
+                        <input id="username" type="text" placeholder="username">
+                        <label for="password"></label>
+                        <input id="password" type="password" placeholder="password">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
@@ -91,7 +107,6 @@
 
 
             // ***** button function to highlight last li elements ***** \\
-
             // $('#highlighLastFact').click(function() {
             //     $('ul').each(function(index) {
             //         if (index === 3) {
@@ -106,46 +121,59 @@
             $('#highlighLastFact').click(function() {
 
                 $('ul').each(function(index, element) {
-                    console.log(index, element);
+                    // console.log(index, element);
                     $(element).children().last().toggleClass('liHighlight');
                 });
 
             });
 
-            // h3 click function to bold all li items
-            $('h3').click(function() {
-                $(this).next().toggleClass('boldListItem')
-            });
-            
-
-            //li click function to turn first li font color to blue
-            // $('li').click(function(){
-            //     // console.log('clicked');
-            //     $('li').first().css('color', 'blue');
+            // h3 click function to bold all li items. made obsolete by h3 toggle function below
+            // $('h3').click(function() {
+            //     $(this).next().toggleClass('boldListItem')
             // });
 
-            //justin' approach:
+
+            //turn first li element blue whenever any li item is clicked.
             $('li').click(function() {
                 $(this).parent().children().first().css('color', 'blue');
             });
-
             // more complex selectors can also be used to accomplish the same goal.
 
 
+            //toggle to hide newsletter heading
+            $('span').click(function(){
+                $('h1').toggle();
+            });
+
+            //fer's approach was to make the X as a button , and store div as a var to use locally in the function.
+            // $('span').click(function(){
+            //     var mainDiv = $(this).parent().parent();
+            //     mainDiv.fadeOut();
+            // });
+
+
+            // ** ul hidden for slide effect \\
+           $('ul').hide();
+            // click function on h3 to give slide animation to park facts
+           $('h3').click(function() {
+                $(this).next().slideToggle();
+            });
+
+            $('#registerHeading').fadeIn(8000).toggleClass('display-5');
+
+            //fer's approach to fade in
+            // $('#registerHeading').hide();
+            //hed rather have hide property in css
+            // setTimeout(function(){
+            //     $('#registerHeading').fadeIn();
+            // }, 8000);
 
 
 
 
-            //for clicking certain elements
-            // $('dt').children().click(function(){
-            //     alert('why would you click here?');
-            // })
 
-            //trying to build an auto list generator for each dd element
-            // $('dd').each(function(){
-            //     var answerList = [];
-            //
-            // })
+
+
 
 
 

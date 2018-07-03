@@ -25,3 +25,11 @@ dd {
 .liHighlight {
     background-color: yellow;
 }
+
+.display-5 {
+    display: none;
+}
+
+#userLogin {
+    text-align: center;
+}
