@@ -11,6 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <h1 id="header" class="display-4" >FAQ Page</h1>
+                <!-- show answers button -->
                 <button id="showAnswers" class="bg-secondary mb-3">Show All</button>
             </div>
         </div>
@@ -37,37 +38,33 @@
                 <strong>A:</strong>
                 <small class="text-muted">Lorem ipsum dolor sit amet.</small>
             </dd>
-            <dt>Question 5</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
-            <dt>Question 6</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
-            <dt>Question 7</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
-            <dt>Question 8</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
-            <dt>Question 9</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
-            <dt>Question 10</dt>
-            <dd class="invisible">
-                <strong>A:</strong>
-                <small class="text-muted">Lorem ipsum dolor sit amet.</small>
-            </dd>
         </dl>
+
+        <div id="parkFacts">
+            <h3>First Park</h3>
+            <ul id="firstParkFacts">
+                <li>Fact #1</li>
+                <li>Fact #2</li>
+                <li>Fact #3</li>
+                <li>Fact #4</li>
+            </ul>
+            <h3>Second Park</h3>
+            <ul id="secondParkFacts">
+                <li>Fact #1</li>
+                <li>Fact #2</li>
+                <li>Fact #3</li>
+                <li>Fact #4</li>
+            </ul>
+            <h3>Third Park</h3>
+            <ul id="thirdParkFacts">
+                <li>Fact #1</li>
+                <li>Fact #2</li>
+                <li>Fact #3</li>
+                <li>Fact #4</li>
+            </ul>
+            <!-- highlight li button -->
+            <button id="highlighLastFact" class="bg-secondary mb-3 ml-2">Highlight Park Facts</button>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -87,24 +84,71 @@
 
             });
 
-            //click listener to highlight dt elements
+            //click listener to highlight dt elements (questions)
             $('dt').click(function() {
                 $(this).toggleClass('highlighted');
             });
 
-            //globalVar to
-            var questions = 0;
-            $('dt').each(function(){
-                questions++;
-                console.log($(this).text());
+
+            // ***** button function to highlight last li elements ***** \\
+
+            // $('#highlighLastFact').click(function() {
+            //     $('ul').each(function(index) {
+            //         if (index === 3) {
+            //             $(this).toggleClass('liHighlight');
+            //         }
+            //     })
+            // });
+
+            //justin's approach:
+            //could also store this function inside a named function and call it with a .click(highLightBtn)
+            // try to re-factor using a named function to toggle when btn is clicked
+            $('#highlighLastFact').click(function() {
+
+                $('ul').each(function(index, element) {
+                    console.log(index, element);
+                    $(element).children().last().toggleClass('liHighlight');
+                });
+
             });
 
-            console.log(questions);
+            // h3 click function to bold all li items
+            $('h3').click(function() {
+                $(this).next().toggleClass('boldListItem')
+            });
+            
+
+            //li click function to turn first li font color to blue
+            // $('li').click(function(){
+            //     // console.log('clicked');
+            //     $('li').first().css('color', 'blue');
+            // });
+
+            //justin' approach:
+            $('li').click(function() {
+                $(this).parent().children().first().css('color', 'blue');
+            });
+
+            // more complex selectors can also be used to accomplish the same goal.
 
 
-            $('dt').children().click(function(){
-                alert('why would you cick here?');
-            })
+
+
+
+
+            //for clicking certain elements
+            // $('dt').children().click(function(){
+            //     alert('why would you click here?');
+            // })
+
+            //trying to build an auto list generator for each dd element
+            // $('dd').each(function(){
+            //     var answerList = [];
+            //
+            // })
+
+
+
 
         //IFFE END
         })();

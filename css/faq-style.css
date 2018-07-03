@@ -7,12 +7,21 @@ body {
 }
 
 
-
 .highlighted {
     background-color: #bada55;
     width: 95px;
 }
 
+
+/* margin applied to the answers in FAQ section*/
 dd {
     margin-left: 10px;
+}
+
+.boldListItem {
+    font-weight: bold;
+}
+
+.liHighlight {
+    background-color: yellow;
 }
