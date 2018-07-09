@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     function generateNameList() {
         $('#nameList').html('');
-        
+
         people.forEach(function (person) {
 
             $('#nameList').append('<li>' + person.name + '</li>');
@@ -29,19 +29,6 @@ $(document).ready(function() {
     }
 
     $('button').click(generateNameList);
-
-
-
-//
-
-
-
-
-
-
-
-
-
 
 // ** DOC END ** \\
 });
