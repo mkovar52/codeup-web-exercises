@@ -106,15 +106,6 @@
             });
 
 
-            // ***** button function to highlight last li elements ***** \\
-            // $('#highlighLastFact').click(function() {
-            //     $('ul').each(function(index) {
-            //         if (index === 3) {
-            //             $(this).toggleClass('liHighlight');
-            //         }
-            //     })
-            // });
-
             //justin's approach:
             //could also store this function inside a named function and call it with a .click(highLightBtn)
             // try to re-factor using a named function to toggle when btn is clicked
@@ -128,9 +119,9 @@
             });
 
             // h3 click function to bold all li items. made obsolete by h3 toggle function below
-            // $('h3').click(function() {
-            //     $(this).next().toggleClass('boldListItem')
-            // });
+            $('h3').click(function() {
+                $(this).next().toggleClass('boldListItem')
+            });
 
 
             //turn first li element blue whenever any li item is clicked.
@@ -154,11 +145,13 @@
 
             // ** ul hidden for slide effect \\
            $('ul').hide();
-            // click function on h3 to give slide animation to park facts
+
+            // toggle h3 slide animations for park facts
            $('h3').click(function() {
                 $(this).next().slideToggle();
             });
 
+            //register fade in prompt
             $('#registerHeading').fadeIn(8000).toggleClass('display-5');
 
             //fer's approach to fade in
@@ -167,15 +160,6 @@
             // setTimeout(function(){
             //     $('#registerHeading').fadeIn();
             // }, 8000);
-
-
-
-
-
-
-
-
-
 
 
         //IFFE END
