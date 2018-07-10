@@ -56,15 +56,15 @@
     <script>
         "use strict";
         (function() {
-
+            // function with ajax request stored inside
             function updatePostEntries(){
                 //ajax with callback to load local file
                 $.ajax("./data/blog.json").done(function(data, status, jqXhr){
-                    //clog check for data shape
+                    //log check for data shape
                     console.log(data);
-                    //prevents duplicate data/posts from being uploaded to page.
+                    //this line prevents duplicate data/posts from being uploaded to page once new-content btn is clicked
                     $('#posts').html('');
-                    //blog post loop
+                    //blog post loop that builds out HTML with JSON info
                     data.forEach(function(post){
                         //loop that maps blog post info to html doc
                         $('#posts').append(post.title + '<br>' + post.date + '<br>' + post.content + '<br>' + post.categories +'<br>');
@@ -79,6 +79,7 @@
             }
             // function call to run
             updatePostEntries();
+            //click listener to fire
             $('#new-content').click(updatePostEntries);
 
             // animation effect on post preview confirmation
