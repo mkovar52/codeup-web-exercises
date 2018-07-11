@@ -5,31 +5,96 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Google Maps API Title</title>
-    <style>
-        /*
-        Need to set the height for the google map
-        */
-        #map-canvas {
-            height: 500px;
-        }
-
-    </style>
-
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/weather_map_style.css">
 </head>
 <body>
+    <!-- container for entire body -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <!-- weather map header -->
+                <h1 class="display-4">Your Weather App</h1>
+                <!-- city -->
+                <p class="text-muted ml-2" id="city-name">San Antonio, TX</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+            <input type="text" id="zip-code" placeholder="Zip Code" onfocus="this.placeholder =''" onblur="this.placeholder = 'Zip Code'">
+            <button id="zip-code-search-btn">Search</button>
+        </div>
+        <!--div row containing weather cards -->
+        <!-- will need to fix layout for tablet screen res later -->
+        <div class="row justify-content-center">
+            <!-- card for day 1 forecast - index 0 -->
+            <!-- build out html manually for this card to have visual & will use loop to create day 2 & 3 cards-->
+            <div class="card border-dark" style="width: 18rem;" id="day-one-weather">
+                <div class="card-body">
+                    <h5 class="card-title ">Monday</h5>
+                    <div id="day-one-weather-info">
+                        <p class="card-text" id="high-low-temp1"></p>
+                        <p class="card-text" id="current-temp1"></p>
+                        <p class="card-text" id="humidity1"></p>
+                        <p class="card-text" id="windspeed1"></p>
+                        <!-- want to use btn to slide down hourly forecast, start once everything else is finished -->
+                        <!-- might use table panes to display additional description about the day, or use this to show the hourly forecast-->
+                        <!--<a href="#" class="btn btn-primary">View Hourly</a>-->
+                    </div>
+                </div>
+            </div>
+            <!-- ** end of card one ** -->
+
+            <!-- card two -->
+            <div class="card border-dark" style="width: 18rem;" id="day-two-weather">
+                <div class="card-body">
+                    <h5 class="card-title ">Tuesday</h5>
+                    <div id="day-two-weather-info">
+                        <p class="card-text" id="high-low-temp2"></p>
+                        <p class="card-text" id="current-temp2"></p>
+                        <p class="card-text" id="humidity2"></p>
+                        <p class="card-text" id="windspeed2"></p>
+                        <!-- want to use btn to slide down hourly forecast, start once everything else is finished -->
+                        <!-- might use table panes to display additional description about the day, or use this to show the hourly forecast-->
+                        <!--<a href="#" class="btn btn-primary">View Hourly</a>-->
+                    </div>
+                </div>
+            </div>
+            <!-- ** end of card two ** -->
+            <!-- card three -->
+            <div class="card border-dark" style="width: 18rem;" id="day-three-weather">
+                <div class="card-body">
+                    <h5 class="card-title ">Wednesday</h5>
+                    <div id="day-three-weather-info">
+                        <p class="card-text" id="high-low-temp3"></p>
+                        <p class="card-text" id="current-temp3"></p>
+                        <p class="card-text" id="humidity3"></p>
+                        <p class="card-text" id="windspeed3"></p>
+                        <!-- want to use btn to slide down hourly forecast, start once everything else is finished -->
+                        <!-- might use table panes to display additional description about the day, or use this to show the hourly forecast-->
+                        <!--<a href="#" class="btn btn-primary">View Hourly</a>-->
+                    </div>
+                </div>
+            </div>
+             <!--** end of card three **-->
+        </div>
 
 
 
-    <!-- div to hold the map -->
-    <div id="map-canvas"></div>
-    <div id="legend"><h3></h3></div>
 
 
 
-    <script>
 
-    </script>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="js/weather_map_script.js"></script>
 </body>
 
 
