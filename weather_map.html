@@ -13,24 +13,23 @@
 <body>
     <!-- container for entire body -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <!-- weather map header -->
-                <h1 class="display-4">Your Weather App</h1>
-                <!-- city -->
-                <p class="text-muted ml-2" id="city-name">San Antonio, TX</p>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-2">
-            <input type="text" id="zip-code" placeholder="Zip Code" onfocus="this.placeholder =''" onblur="this.placeholder = 'Zip Code'">
-            <button id="zip-code-search-btn">Search</button>
-        </div>
+        <!-- hidden for now, might incorporate later -->
+        <!--<div class="row">-->
+            <!--<div class="col-6">-->
+                <!--&lt;!&ndash; page header &ndash;&gt;-->
+                <!--<h1 class="display-4">Your Weather App</h1>-->
+                <!--&lt;!&ndash; zip search feature &ndash;&gt;-->
+                <!--&lt;!&ndash; could use jquery .val method to use whatever user enters to display weather in that area &ndash;&gt;-->
+                <!--&lt;!&ndash; also might be a good idea to hide google map on xs screen res, and only allow search by zip code &ndash;&gt;-->
+                <!--<input type="text" id="zip-code" placeholder="Zip Code" onfocus="this.placeholder =''" onblur="this.placeholder = 'Zip Code'">-->
+                <!--<button class="btn" id="zip-code-search-btn">Search</button>-->
+            <!--</div>-->
+        <!--</div>-->
+
         <!--div row containing weather cards -->
-        <!-- will need to fix layout for tablet screen res later -->
-        <div class="row justify-content-center">
-            <!-- card for day 1 forecast - index 0 -->
-            <!-- build out html manually for this card to have visual & will use loop to create day 2 & 3 cards-->
-            <div class="card border-dark" style="width: 18rem;" id="day-one-weather">
+        <div class="row justify-content-center mb-3 mt-5">
+            <!-- day one weather card -->
+            <div class="card" id="day-one">
                 <div class="card-body">
                     <h5 class="card-title ">Monday</h5>
                     <div id="day-one-weather-info">
@@ -46,8 +45,9 @@
             </div>
             <!-- ** end of card one ** -->
 
-            <!-- card two -->
-            <div class="card border-dark" style="width: 18rem;" id="day-two-weather">
+            <!-- day two weather card -->
+            <!-- got rid of border to see difference vs others in card 1 & 2-->
+            <div class="card mr-3 ml-3" id="day-two">
                 <div class="card-body">
                     <h5 class="card-title ">Tuesday</h5>
                     <div id="day-two-weather-info">
@@ -62,8 +62,9 @@
                 </div>
             </div>
             <!-- ** end of card two ** -->
-            <!-- card three -->
-            <div class="card border-dark" style="width: 18rem;" id="day-three-weather">
+
+            <!-- day three weather card  -->
+            <div class="card border-dark mr-3" id="day-three">
                 <div class="card-body">
                     <h5 class="card-title ">Wednesday</h5>
                     <div id="day-three-weather-info">
@@ -78,15 +79,63 @@
                 </div>
             </div>
              <!--** end of card three **-->
+
+            <!-- day four weather card -->
+            <div class="card border-dark mr-3"  id="day-four">
+                <div class="card-body">
+                    <h5 class="card-title">Thursday</h5>
+                    <div id="day-four-weather-info">
+                        <p id="high-low-temp4"></p>
+                        <p id="current-temp4"></p>
+                        <p id="humidity4"></p>
+                        <p id="windspeed4"></p>
+                        <!-- want to use btn to slide down hourly forecast, start once everything else is finished -->
+                        <!-- might use table panes to display additional description about the day, or use this to show the hourly forecast-->
+                        <!--<a href="#" class="btn btn-primary">View Hourly</a>-->
+                    </div>
+                </div>
+            </div>
+            <!--** end of card four **-->
+
+            <!-- day five weather card -->
+            <div class="card border-dark"  id="day-five">
+                <div class="card-body">
+                    <h5 class="card-title">Friday</h5>
+                    <div id="day-five-weather-info">
+                        <p id="high-low-temp5"></p>
+                        <p id="current-temp5"></p>
+                        <p id="humidity5"></p>
+                        <p id="windspeed5"></p>
+                        <!-- want to use btn to slide down hourly forecast, start once everything else is finished -->
+                        <!-- might use table panes to display additional description about the day, or use this to show the hourly forecast-->
+                        <!--<a href="#" class="btn btn-primary">View Hourly</a>-->
+                    </div>
+                </div>
+            </div>
+            <!--** end of card five **-->
+        <!-- ** end of container row holding weather cards ** -->
         </div>
-
-
-
-
-
-
-
+        <!-- row containing buttons and google map -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <!-- city name div that holds info and populates name of city where marker is dropped -->
+                <!-- buttons to update weather, display 3 or 5day forecast -->
+                <!--<button class="btn" id="update-weather">Update Weather</button>-->
+                <button type="submit" class="btn btn-secondary btn-sm mr-2" id="display-3-day-forecast">Three-Day Forecast</button>
+                <!-- toggle hide/show for last two cards with this button, might not even need the others-->
+                <button type="button" class="btn btn-secondary btn-sm" id="display-5-day-forecast">Five-Day Forecast</button>
+            </div>
+        </div>
+        <h3 class=" display-5 text-center" id="city-name"></h3>
+        <!-- google map container -->
+        <div class="row justify-content-center mt-2">
+            <div class="col-8">
+                <div id="map-canvas"></div>
+            </div>
+        </div>
+        <!-- ** map end ** -->
     </div>
+
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -94,7 +143,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
     <script src="js/weather_map_script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM&callback=initMap"></script>
+
 </body>
 
 

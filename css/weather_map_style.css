@@ -1,17 +1,26 @@
-/* make sure to give map a canvas:*/
-/*#map-canvas {*/
-    /*height: 500px;*/
-/*}*/
+body {
+    height: 800px;
+    background-color: papayawhip;
+}
 
-/*.day-one-weather-img {*/
-    /*border: 1px solid red;*/
-    /*height: 150px;*/
-/*}*/
+/* canvas for map*/
+#map-canvas {
+    height: 350px;
+    /*border: 1px solid black;*/
+}
 
-/*body {*/
-    /*background-color: #56A390;*/
-/*}*/
+/* weather card shadow effect */
+#day-one, #day-two, #day-three, #day-four, #day-five {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+}
 
-/*#city-name {*/
-    /*color: white;*/
-/*}*/
+/* hidden weather cards 4 & 5 */
+#day-four, #day-five {
+    display: none;
+}
+
+.card-body{
+    padding-left: 10px;
+}
