@@ -24,3 +24,9 @@ body {
 .card-body{
     padding-left: 10px;
 }
+
+#weather-icon {
+    height:75px;
+    width: 75px;
+    border: 1px solid black;
+}

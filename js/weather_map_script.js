@@ -1,25 +1,33 @@
 "use strict";
 
-    // =================================     ** global vars  **    ========================================= \\
+    // ===================================   ** global vars  **    ============================================== \\
 
     var lat = 29.42;
     var lng = -98.49;
 
-// =================================     ** function for AJAX updates **      ================================= \\
-    function updateWeatherCardInfo(lat, lng){
+// ===================== ** weather card builder with AJAX request to weatherAPI ** ============================== \\
+
+    function updateWeatherCardInfo(lat, lng) {
         $.get("http://api.openweathermap.org/data/2.5/forecast?appid=e12d834255482e959a94744605064c71&units=imperial&lat="
             + lat + "&lon=" + lng).done(function(data){
+
+            // console log to view all data
             console.log(data);
-            $('#city-name').html(data.city.name);
+
+            //displays the city name of wherever the marker is dropped
+            $('#city-name').html("Selected City: " + data.city.name);
+            console.log(data.list[0].weather.icon);
 
             //refactor building cards by using a loop of some kind. DRY:(
-            //weather card info for day 1
+
+            // weather card info for day 1
             $('#high-low-temp1').html("<p>High & Low: " + roundTemperatures(data.list[0].main.temp_max)+ "&#8457 / "+ roundTemperatures(data.list[0].main.temp_min) + "&#8457</p>");
             $('#current-temp1').html("<p>Currently: " + roundTemperatures(data.list[0].main.temp) + "&#8457</p>");
             $('#humidity1').html("<p>Humidity: " + data.list[0].main.humidity + "%</p>");
             $('#windspeed1').html("<p>Wind Speed: " + data.list[0].wind.speed + "mph</p>");
+            // $('img').attr().html(data.list[0].weather[0].icon);
 
-            //weather card info for day 2
+            // weather card info for day 2
             $('#high-low-temp2').html("<p>High & Low: " + roundTemperatures(data.list[8].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[8].main.temp_min) + "&#8457</p>");
             $('#current-temp2').html("<p>Currently: " + roundTemperatures(data.list[8].main.temp) + "&#8457</p>");
             $('#humidity2').html("<p>Humidity: " + data.list[8].main.humidity + "%</p>");
@@ -31,14 +39,13 @@
             $('#humidity3').html("<p>Humidity: " + data.list[16].main.humidity + "%</p>");
             $('#windspeed3').html("<p>Wind Speed: " + data.list[16].wind.speed + "mph</p>");
 
-        //    cards need to be hidden
-        //    once toggle button is CLICKED, reveal and space accordingly
-        //    html will be added to ids = day-four-weather-info & day-five-weather-info
+            // weather card info for day 4
             $('#high-low-temp4').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
             $('#current-temp4').html("<p>Currently: " + roundTemperatures(data.list[24].main.temp) + "&#8457</p>");
             $('#humidity4').html("<p>Humidity: " + data.list[24].main.humidity + "%</p>");
             $('#windspeed4').html("<p>Wind Speed: " + data.list[24].wind.speed + "mph</p>");
 
+            // weather card info for day 5
             $('#high-low-temp5').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
             $('#current-temp5').html("<p>Currently: " + roundTemperatures(data.list[24].main.temp) + "&#8457</p>");
             $('#humidity5').html("<p>Humidity: " + data.list[24].main.humidity + "%</p>");
@@ -46,7 +53,7 @@
 
         });
     }
-
+    //function call to fire weather card builder
     updateWeatherCardInfo(lat, lng);
 
 
@@ -73,7 +80,7 @@
             });
 
 
-            // event listener to store updated lat and lng when marker is dragged, info passed to weather card updating function
+    // event listener to store updated lat and lng when marker is dragged, info passed to
             google.maps.event.addListener(marker, 'dragend', function(e){
                 var lat = marker.getPosition().lat();
                 var lng = marker.getPosition().lng();
@@ -82,18 +89,19 @@
             });
 
         }
-// =================================     ** additional function features **      ================================= \\
+    // ===========================  ** additional function features & EVENTS ** =================================== \\
 
+        // function wrapped around weather temps to round to the nearest whole number
         function roundTemperatures(num){
             return Math.round(num);
         }
 
-
-
+        // click event to display 5 day forecast
         $('#display-5-day-forecast').on('click', function(){
             $('div .card:hidden').show();
         });
 
+        // click event to revert back to 3 day forecast
         $('#display-3-day-forecast').on('click', function(){
             $('#day-four, #day-five').hide();
         });
