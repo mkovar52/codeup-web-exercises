@@ -16,44 +16,51 @@
 
             //displays the city name of wherever the marker is dropped
             $('#city-name').html("Selected City: " + data.city.name);
-            console.log(data.list[0].weather.icon);
+            // console.log(data.list[0].weather[0].icon);
+            //01d icon code
 
             //refactor building cards by using a loop of some kind. DRY:(
+            //single day display card needed
 
             // weather card info for day 1
-            $('#high-low-temp1').html("<p>High & Low: " + roundTemperatures(data.list[0].main.temp_max)+ "&#8457 / "+ roundTemperatures(data.list[0].main.temp_min) + "&#8457</p>");
+            $('#high-low-temp1').html("<p>High & Low: " + roundTemperatures(data.list[0].main.temp_max)+ "&#8457 / "
+                + roundTemperatures(data.list[0].main.temp_min) + "&#8457</p>");
             $('#current-temp1').html("<p>Currently: " + roundTemperatures(data.list[0].main.temp) + "&#8457</p>");
             $('#humidity1').html("<p>Humidity: " + data.list[0].main.humidity + "%</p>");
             $('#windspeed1').html("<p>Wind Speed: " + data.list[0].wind.speed + "mph</p>");
-            // $('img').attr().html(data.list[0].weather[0].icon);
+            // $('#weather-icon').css('background-image', "http://openweathermap.org/img/w/10d.png");
 
             // weather card info for day 2
-            $('#high-low-temp2').html("<p>High & Low: " + roundTemperatures(data.list[8].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[8].main.temp_min) + "&#8457</p>");
+            $('#high-low-temp2').html("<p>High & Low: " + roundTemperatures(data.list[8].main.temp_max) + "&#8457 / "
+                + roundTemperatures(data.list[8].main.temp_min) + "&#8457</p>");
             $('#current-temp2').html("<p>Currently: " + roundTemperatures(data.list[8].main.temp) + "&#8457</p>");
             $('#humidity2').html("<p>Humidity: " + data.list[8].main.humidity + "%</p>");
             $('#windspeed2').html("<p>Wind Speed: " + data.list[8].wind.speed + "mph</p>");
 
             //weather card info for day 3
-            $('#high-low-temp3').html("<p>High & Low: " + roundTemperatures(data.list[16].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[16].main.temp_min) + "&#8457</p>");
+            $('#high-low-temp3').html("<p>High & Low: " + roundTemperatures(data.list[16].main.temp_max) + "&#8457 / "
+                + roundTemperatures(data.list[16].main.temp_min) + "&#8457</p>");
             $('#current-temp3').html("<p>Currently: " + roundTemperatures(data.list[16].main.temp) + "&#8457</p>");
             $('#humidity3').html("<p>Humidity: " + data.list[16].main.humidity + "%</p>");
             $('#windspeed3').html("<p>Wind Speed: " + data.list[16].wind.speed + "mph</p>");
 
             // weather card info for day 4
-            $('#high-low-temp4').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
+            $('#high-low-temp4').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "
+                + roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
             $('#current-temp4').html("<p>Currently: " + roundTemperatures(data.list[24].main.temp) + "&#8457</p>");
             $('#humidity4').html("<p>Humidity: " + data.list[24].main.humidity + "%</p>");
             $('#windspeed4').html("<p>Wind Speed: " + data.list[24].wind.speed + "mph</p>");
 
             // weather card info for day 5
-            $('#high-low-temp5').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "+ roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
+            $('#high-low-temp5').html("<p>High & Low: " + roundTemperatures(data.list[24].main.temp_max) + "&#8457 / "
+                + roundTemperatures(data.list[24].main.temp_min) + "&#8457</p>");
             $('#current-temp5').html("<p>Currently: " + roundTemperatures(data.list[24].main.temp) + "&#8457</p>");
             $('#humidity5').html("<p>Humidity: " + data.list[24].main.humidity + "%</p>");
             $('#windspeed5').html("<p>Wind Speed: " + data.list[24].wind.speed + "mph</p>");
 
         });
     }
-    //function call to fire weather card builder
+    //function call to trigger weather card builder
     updateWeatherCardInfo(lat, lng);
 
 
@@ -99,14 +106,21 @@
         // click event to display 5 day forecast
         $('#display-5-day-forecast').on('click', function(){
             $('div .card:hidden').show();
+            $('#single-day-display').hide();
         });
 
         // click event to revert back to 3 day forecast
         $('#display-3-day-forecast').on('click', function(){
             $('#day-four, #day-five').hide();
+            $('#day-one, #day-two, #day-three').show();
+            $('#single-day-display').hide();
         });
 
+        // click event for single day display
+        $('#single-day-display-btn').click(function(){
+            $('#day-one,#day-two, #day-three, #day-four, #day-five').hide();
+            $('#single-day-display').show();
+        });
 
-
-
-
+        // slide up feat for weather buttons
+        // $('#weather-feat-1').
