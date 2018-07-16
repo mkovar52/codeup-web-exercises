@@ -91,7 +91,7 @@
             },
         ];
 
-    // PROBLEM 1 - create an array of the first letters of each fruit
+// PROBLEM 1 - create an array of the first letters of each fruit
         let lettersOfFruit = fruits.map( (letter) => letter.charAt(0));
         // console.log(lettersOfFruit);
 
@@ -101,7 +101,7 @@
         let newAnimalArray = animals.map( (animal) => animal.charAt(0));
         // console.log(newAnimalArray);
 
-    // PROBLEM 2 - create array of user objects based on the customers array
+// PROBLEM 2 - create array of user objects based on the customers array
         // of objects (each user object should just have name and age properties)
         // use map
 
@@ -119,7 +119,7 @@
         // console.log(newUserObj);
 
 
-    // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
+// PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
         // containing the same properties as the objects on the customers objects
         // use filter
 
@@ -128,7 +128,7 @@
             // console.log(civilServants);
 
 
-    // PROBLEM 4 - determine the average age of customers
+// PROBLEM 4 - determine the average age of customers
         // use reduce and destructuring
 
         // console.log(customers);
@@ -137,7 +137,7 @@
         // console.log(avgAgeOfCustomers);
 
 
-        // PROBLEM 5 - create a function makeSuperPet() that takes in the pets array as input and returns a single pet object
+// PROBLEM 5 - create a function makeSuperPet() that takes in the pets array as input and returns a single pet object
         // with the following shape...
         /* use reduce
 
@@ -162,7 +162,7 @@
 
 
 
-        // PROBLEM 6 - take in an array of pets and return an array of the length of first names for pugs only
+// PROBLEM 6 - take in an array of pets and return an array of the length of first names for pugs only
         // your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
         // use map
 
@@ -177,7 +177,7 @@
         // console.log(pugNameCheck);
 
 
-    // PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
+// PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
         // returns an array of female family member names
 
         // this works, but refactor later. this seems like way too many lines \\
@@ -197,7 +197,7 @@
         let getFemaleFamilyMembers = family.filter( member => member.gender === 'female');
         // console.log(getFemaleFamilyMembers);
 
-    // PROBLEM 8 - create a function makeLongPetString() that when given the variable of pets,
+// PROBLEM 8 - create a function makeLongPetString() that when given the variable of pets,
         // returns a string of all property values with dashes separating each property value
 
 
@@ -205,7 +205,7 @@
         let makeLongPetString = pets.map( pet => ([pet.name, pet.age, pet.breed].join("-")));
         // console.log(makeLongPetString);
 
-    // PROBLEM 9 - create a function that when given an array of first names, returns an array of the same names with a last name of Smith
+// PROBLEM 9 - create a function that when given an array of first names, returns an array of the same names with a last name of Smith
 
         // input = ['Sally', 'Fred', 'Steve']
         // output = ['Sally Smith', 'Fred Smith', 'Steve']
@@ -215,7 +215,7 @@
 
         // console.log(lastNameSmith);
 
-    // PROBLEM 10 - create a function that when given an array of numbers, return the sum of even numbers
+// PROBLEM 10 - create a function that when given an array of numbers, return the sum of even numbers
         let numbers = [2, 10, 20, 8];
         let sumOfArrNums = numbers.reduce((accumulation, number) => {
                 return accumulation + number;
@@ -223,7 +223,7 @@
 
         // console.log(sumOfArrNums);
 
-        // PROBLEM 11 - create a function that when given an array of numbers, return the sum of all numbers evenly divisible by 10
+// PROBLEM 11 - create a function that when given an array of numbers, return the sum of all numbers evenly divisible by 10
 
         let divisbleByTen = numbers.filter( number => number % 10 === 0);
         // console.log(divisbleByTen);
@@ -256,11 +256,11 @@
         // console.log(truthyArrCheck);
 
 
-    // PROBLEM 14 - create a function that when given an object, returns the property values as an array of elements
+// ** PROBLEM 14 - create a function that when given an object, returns the property values as an array of elements
 
 
 
-    // PROBLEM 15 - create a function that when given three arguments: a min num, a max num, an array
+// PROBLEM 15 - create a function that when given three arguments: a min num, a max num, an array
     // of nums will return the array of nums that are only between the min and max values, inclusive
         let minNum = 5;
         let maxNum = 14;
@@ -268,18 +268,23 @@
 
         let minAndMaxNumCheck = numsArr.filter( (number) => number >= minNum && number <= maxNum);
 
-        console.log(minAndMaxNumCheck);
+        // console.log(minAndMaxNumCheck);
 
-        // PROBLEM 16 - create a function that when given an array of strings, returns an array of objects with properties for the given string value
-        // and the length of the string and the string WITHOUT vowels (not including y)
+    // **  PROBLEM 16 - create a function that when given an array of strings, returns an array of OBJECTS with properties for the given string value
+        // and the .length of the string
+        // AND the string WITHOUT vowels (not including y)
 
         let strArrCities = ["Austin", "San Antonio", "Houston", "Dallas"];
 
-        let infoAboutStrCities = strArrCities.map( (city) => city);
-            // console.log(city);
-        // })
+        // let infoAboutStrCities = strArrCities.map( (city) => city);
 
-        console.log(infoAboutStrCities);
+        let newArrOfCityObjects = strArrCities.map((accumulator, city) => {
+            accumulator.population = city.length * 2;
+            console.log(accumulator);
+            // accumulator.stringLength +=
+        }, {population: 0, stringLength: 0, strWithoutVowels: "" });
+
+        // console.log(new);
 
     }
 
