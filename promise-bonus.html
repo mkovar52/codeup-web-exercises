@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>promise bonus</title>
+</head>
+<body>
+<h1>promise bonus problems</h1>
+
+    <button id="getUserBtn">Get User</button>
+
+    <ul id="inputField">
+
+    </ul>
+
+
+    <!--<button id="getCharsBtn">Get Characters</button>-->
+<!--<ul id="charactersList">-->
+
+<!--</ul>-->
+
+
+    <script>
+        "use strict";
+
+        //bonus 1 - profiles \\
+
+    //function that fetches profiles info
+    let fetchUserName = () => {
+        fetch('./data/profiles.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let inputField = '';
+                data.forEach(function(profile){
+                    inputField += `<li> </li>`
+                })
+            });
+
+        // document.getElementById('inputField').innerText = data;
+
+    };
+
+    // click event to trigger fetch function
+    document.getElementById('getUserBtn').addEventListener('click', fetchUserName);
+
+
+
+
+
+        // $("#getCharsBtn").click(function(){
+        //     getStarWarsCharacters()
+        // });
+
+
+    // const getStarWarsCharacters = () => {
+    //     fetch("https://swapi.co/api/people")
+    //         .then(response => response.json())
+    //         .then(data => console.log(data));
+    // };
+
+        // getStarWarsCharacters();
+
+
+
+    </script>
+</body>
+</html>

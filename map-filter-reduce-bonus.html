@@ -160,8 +160,6 @@
 
         // console.log(makeSuperPet);
 
-
-
 // PROBLEM 6 - take in an array of pets and return an array of the length of first names for pugs only
         // your output for the given input should be [3, 6] for 'Bud' and 'Bowser'
         // use map
@@ -175,7 +173,6 @@
         });
 
         // console.log(pugNameCheck);
-
 
 // PROBLEM 7 - create a function getFemaleFamilyMembers() that when given the family variable as an argument,
         // returns an array of female family member names
@@ -228,8 +225,8 @@
         let divisbleByTen = numbers.filter( number => number % 10 === 0);
         // console.log(divisbleByTen);
 
-    // PROBLEM 12 - create a function that when given an array of names, returns a string of all the first letters of each name
-    //    1st attempt
+// PROBLEM 12 - create a function that when given an array of names, returns a string of all the first letters of each name
+        //  1st attempt
         // let firstLetterOfNamesStr = firstNames.map name => name.charAt(0);
 
         let firstLetterStr = firstNames.map( (name) => {
@@ -243,7 +240,7 @@
         // console.log(firstLetterStr);
 
 
-    // PROBLEM 13 - create a function that when given an array of values, returns an array of only the truthy values
+// PROBLEM 13 - create a function that when given an array of values, returns an array of only the truthy values
         let truthyArr = [0, 2, "string", null, false];
 
         let truthyArrCheck = truthyArr.filter( (value) => {
@@ -256,7 +253,7 @@
         // console.log(truthyArrCheck);
 
 
-// ** PROBLEM 14 - create a function that when given an object, returns the property values as an array of elements
+// ** PROBLEM 14 - create a function that when given an OBJECT, returns the property values as an array of elements
 
 
 
@@ -270,21 +267,25 @@
 
         // console.log(minAndMaxNumCheck);
 
-    // **  PROBLEM 16 - create a function that when given an array of strings, returns an array of OBJECTS with properties for the given string value
+// **  PROBLEM 16 - create a function that when given an array of strings, returns an array of OBJECTS with properties for the given string value
         // and the .length of the string
         // AND the string WITHOUT vowels (not including y)
-
+        //
         let strArrCities = ["Austin", "San Antonio", "Houston", "Dallas"];
 
-        // let infoAboutStrCities = strArrCities.map( (city) => city);
+        let newArrofCityObjects = strArrCities.map( (city) => {
+            let vowels = ['a', 'e', 'i', 'o', 'u'];
 
-        let newArrOfCityObjects = strArrCities.map((accumulator, city) => {
-            accumulator.population = city.length * 2;
-            console.log(accumulator);
-            // accumulator.stringLength +=
-        }, {population: 0, stringLength: 0, strWithoutVowels: "" });
+            let newArray = city.split('').map( char => {
+                if( !vowels.includes(char.toLowerCase() ) ) {
+                    return char;
+                }
+            });
 
-        // console.log(new);
+            return {'city': city, 'size': city.length, 'newArray': newArray.join('') };
+        });
+
+        // console.log(newArrofCityObjects);
 
     }
 
